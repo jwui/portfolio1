@@ -25,14 +25,14 @@
     <%- include("common/header.ejs") %>
     <div id="detail_container">
       <div class="brd_center">
-        <div>
+        <div class="imgcont">
           <img src="/upload/<%- brdData.fileName %>" />
           <!-- <a href="/upload/<%- brdData.fileName %>" download>파일 다운로드</a> -->
+          <div class="price"><%- brdData.brdprice %></div>
         </div>
         <div class="title"><%- brdData.brdtitle %></div>
         <div><i class="fa-solid fa-user"></i><%- brdData.brdauther %></div>
         <div><%- brdData.brdcontext %></div>
-        <div><%- brdData.brdprice %></div>
       </div>
       <!-- server.js에서 넘겨준 userData에 있는 nick 과
                  데이터베이스에서 가지고온 brdData에 있는 nick과 일치하면수정 삭제 버튼이 보인다.-->
