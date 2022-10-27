@@ -1,0 +1,43 @@
+<% if(!userData) { %>
+<script>
+  alert("비회원은 접근할 수 없는 페이지입니다");
+  location.href = "/login";
+</script>
+<% } %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 작성페이지</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <%- include("common/header.ejs") %>
+    <div id="insert_container">
+      <div class="brd_center">
+        <div class="title">게시글 작성</div>
+        <form
+          id="brd_form"
+          action="/add"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <label for="title">게시글 제목</label>
+          <input type="text" name="title" />
+          <label for="price">가격</label>
+          <input type="text" name="price" />
+          <label for="context">내용</label>
+          <textarea name="context"></textarea>
+          <label for="filetest">첨부할 사진</label>
+          <input type="file" name="filetest" />
+          <button type="submit">게시글 작성</button>
+          <a href="/brdlist">목록</a>
+        </form>
+      </div>
+    </div>
+    <%- include("common/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인페이지</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.2/countUp.min.js"
+      integrity="sha512-bo+22vUP5nA4TPXCErmSTqmrBTFpnK9FXPKjDAahqShfXIdh9JpMl0iS/ZXHPw70OzdRz3xP3pqJfoo89JITkQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  </head>
+  <body>
+    <%- include("common/header.ejs") %>
+    <div id="index_container">
+      <div class="cont1">
+        <div class="context">
+          <h2><div id="app"></div></h2>
+          <div class="btns">
+            <a href="#">게시글 페이지로 가기</a>
+            <a href="#">더 알아보기</a>
+          </div>
+        </div>
+      </div>
+      <div class="cont2">
+        <div class="center">
+          <div class="context">
+            <h2>WHAT ARE YOU LOOKING FOR?</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod
+            </p>
+          </div>
+          <div class="inner">
+            <div class="left">
+              <img src="/img/img1.jpg" />
+            </div>
+            <div class="right">
+              <div class="card card1">
+                <i class="fa-solid fa-plane"></i>
+                <div>
+                  <h2>Quick</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod
+                  </p>
+                </div>
+              </div>
+              <div class="card card2">
+                <i class="fa-solid fa-car-side"></i>
+                <div>
+                  <h2>Affordable</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod
+                  </p>
+                </div>
+              </div>
+              <div class="card card3">
+                <i class="fa-solid fa-road"></i>
+                <div>
+                  <h2>Reliable</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod
+                  </p>
+                </div>
+              </div>
+              <div class="card card4">
+                <i class="fa-solid fa-infinity"></i>
+                <div>
+                  <h2>Simple</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cont4">
+        <div class="center">
+          <div class="context">
+            <h2>MOST POPULAR PLACES</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="places">
+            <div class="place place1">
+              <div class="content">
+                <h2>Florida</h2>
+                <p>14 flights</p>
+              </div>
+            </div>
+            <div class="place place2">
+              <div class="content">
+                <h2>California</h2>
+                <p>98 flights</p>
+              </div>
+            </div>
+            <div class="place place3">
+              <div class="content">
+                <h2>New York</h2>
+                <p>94 flights</p>
+              </div>
+            </div>
+            <div class="place place4">
+              <div class="content">
+                <h2>London</h2>
+                <p>28 flights</p>
+              </div>
+            </div>
+            <div class="place place5">
+              <div class="content">
+                <h2>Australia</h2>
+                <p>38 flights</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cont5">
+        <div class="center">
+          <div class="card card1">
+            <i class="fa-solid fa-medal"></i>
+            <div class="contents">
+              <h2 id="count1"></h2>
+              <p>Accolades</p>
+            </div>
+          </div>
+          <div class="card card2">
+            <i class="fa-solid fa-person"></i>
+            <div class="contents">
+              <h2 id="count2"></h2>
+              <p>Customers</p>
+            </div>
+          </div>
+          <div class="card card3">
+            <i class="fa-brands fa-magento"></i>
+            <div class="contents">
+              <h2 id="count3"></h2>
+              <p>Agents</p>
+            </div>
+          </div>
+          <div class="card card4">
+            <i class="fa-solid fa-plane"></i>
+            <div class="contents">
+              <h2 id="count4"></h2>
+              <p>Airlines</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cont6">
+        <div class="context">
+          <h2>OUR STAFF</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="cards">
+          <div class="card card1">
+            <img src="/img/staff1.jpg" />
+            <div class="contents">
+              <h3>Maria Blank</h3>
+              <p>Office Manager</p>
+              <div class="icons">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card card2">
+            <img src="/img/staff2.jpg" />
+            <div class="contents">
+              <h3>Karen Paran</h3>
+              <p>Support Manager</p>
+              <div class="icons">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card card3">
+            <img src="/img/staff3.jpg" />
+            <div class="contents">
+              <h3>Martin Smith</h3>
+              <p>Web Developer</p>
+              <div class="icons">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card card4">
+            <img src="/img/staff4.jpg" />
+            <div class="contents">
+              <h3>Jordan Peterson</h3>
+              <p>Creative Director</p>
+              <div class="icons">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cont7">
+        <div class="context">
+          <h2>OUR STAFF</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="center">
+          <div class="card card1">
+            <img src="/img/staff1.jpg" />
+            <div class="context">
+              <h3>Karen Paran</h3>
+              <div class="stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p>( 4.0 Reviews )</p>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                perspiciatis at laborum, adipisci suscipit
+              </p>
+            </div>
+          </div>
+          <div class="card card2">
+            <img src="/img/staff2.jpg" />
+            <div class="context">
+              <h3>Eliane Perei</h3>
+              <div class="stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p>( 3.9 Reviews )</p>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                perspiciatis at laborum, adipisci suscipit
+              </p>
+            </div>
+          </div>
+          <div class="card card3">
+            <img src="/img/staff3.jpg" />
+            <div class="context">
+              <h3>Jordan Peterson</h3>
+              <div class="stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p>( 4.1 Reviews )</p>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                perspiciatis at laborum, adipisci suscipit
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cont8">
+        <div class="context">
+          <h2>OUR BLOG</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+            perspiciatis at laborum, adipisci suscipit
+          </p>
+        </div>
+        <div class="center">
+          <div class="card card1">
+            <img src="/img/blog1.jpg" />
+            <div class="midbar">
+              <img src="img/staff1.jpg" />
+              <div class="context">
+                <p>Alex Teseira</p>
+                <div class="icons">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="context">
+              <h2>Make Your Dreams Come True</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+                dolorum ratione aliquid doloremque cumque
+              </p>
+            </div>
+          </div>
+          <div class="card card2">
+            <img src="/img/blog2.jpg" />
+            <div class="midbar">
+              <img src="img/staff3.jpg" />
+              <div class="context">
+                <p>Alex Teseira</p>
+                <div class="icons">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="context">
+              <h2>Make Your Dreams Come True</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+                dolorum ratione aliquid doloremque cumque
+              </p>
+            </div>
+          </div>
+          <div class="card card3">
+            <img src="/img/blog3.jpg" />
+            <div class="midbar">
+              <img src="img/staff2.jpg" />
+              <div class="context">
+                <p>Alex Teseira</p>
+                <div class="icons">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="context">
+              <h2>Make Your Dreams Come True</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+                dolorum ratione aliquid doloremque cumque
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include("common/footer.ejs") %>
+    <script src="/js/countUp.js"></script>
+    <script src="/js/typewriter.js"></script>
+  </body>
+</html>

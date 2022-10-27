@@ -1,0 +1,106 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+  rel="stylesheet"
+/>
+<div id="header">
+  <div class="h-top">
+    <div class="condition">
+      <% if(!userData) { %>
+      <a class="member" href="/login"
+        ><i class="fa fa-sign-in" aria-hidden="true"> 로그인</i>
+      </a>
+      <a class="member" href="/join"
+        ><i class="fa fa-user-plus" aria-hidden="true"> 가입하기</i></a
+      >
+      <% } else { %>
+      <div><%- userData.joinname%> 님</div>
+      <a class="logout" href="/logout">로그아웃</a>
+      <% } %>
+    </div>
+  </div>
+  <div class="h-bot">
+    <h1 class="logo">
+      <a href="/">
+        <img src="/img/logo.png" />
+        TRIPPR</a
+      >
+    </h1>
+    <div class="center">
+      <div class="gnbWrap">
+        <!--gnb 메뉴와 / 가로100% 뒷배경 들어갈부분-->
+        <div class="gnbBg"></div>
+        <ul class="gnb">
+          <li>
+            <a href="#">회사소개</a>
+            <ul class="depth2">
+              <li><a href="#">기업소개</a></li>
+              <li><a href="#">비전</a></li>
+              <li><a href="#">오시는길</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">사업소개</a>
+            <ul class="depth2">
+              <li><a href="#">사업영역</a></li>
+              <li><a href="#">생산시설</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">제품소개</a>
+            <ul class="depth2"></ul>
+          </li>
+          <li>
+            <a href="#">고객센터</a>
+            <ul class="depth2">
+              <li><a href="/brdlist">게시글 목록</a></li>
+              <li><a href="/brdinsert">게시글 작성</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">쇼핑몰</a>
+            <ul class="depth2"></ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  //마우스 올리고 내릴 태그 대상
+  let gnbMenu = document.querySelector(".gnbWrap");
+  //2댑스 메뉴들 5개 대상 (ul 태그 5개)
+  let depth2 = document.querySelectorAll(".depth2");
+  // depth2 = ["첫번째.depth2","두번째.depth2","세번째.depth2","네번째.depth2","다섯번째.depth2"]
+  //gnbBg 대상
+  let gnbBg = document.querySelector(".gnbBg");
+
+  //마우스 올렸을 때 이벤트
+  gnbMenu.addEventListener("mouseenter", function () {
+    //5개의 2댑스가 동시에 등장
+    for (let i = 0; i < depth2.length; i++) {
+      depth2[i].style.display = "block";
+    }
+    //gnbBg 화면에 나오게 처리
+    gnbBg.style.display = "block";
+  });
+
+  //마우스 내렸을 때 이벤트
+  gnbMenu.addEventListener("mouseleave", function () {
+    //5개의 2댑스 사라지게
+    for (let i = 0; i < depth2.length; i++) {
+      depth2[i].style.display = "none";
+    }
+    //gnbBg 화면에서 사라지게
+    gnbBg.style.display = "none";
+  });
+</script>

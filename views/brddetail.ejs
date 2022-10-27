@@ -1,0 +1,49 @@
+<% if(!userData) { %>
+<script>
+  alert("비회원은 접근할 수 없는 페이지입니다");
+  location.href = "/login";
+</script>
+<% } %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 목록페이지</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <%- include("common/header.ejs") %>
+    <div id="detail_container">
+      <div class="brd_center">
+        <div>
+          <img src="/upload/<%- brdData.fileName %>" />
+          <!-- <a href="/upload/<%- brdData.fileName %>" download>파일 다운로드</a> -->
+        </div>
+        <div class="title"><%- brdData.brdtitle %></div>
+        <div><i class="fa-solid fa-user"></i><%- brdData.brdauther %></div>
+        <div><%- brdData.brdcontext %></div>
+        <div><%- brdData.brdprice %></div>
+      </div>
+      <!-- server.js에서 넘겨준 userData에 있는 nick 과
+                 데이터베이스에서 가지고온 brdData에 있는 nick과 일치하면수정 삭제 버튼이 보인다.-->
+      <div class="buttons">
+        <% if(userData.joinname === brdData.brdauther) { %>
+        <a href="/brdupt/<%- brdData.brdid %>">수정</a>
+        <a href="/delete/<%- brdData.brdid %>">삭제</a>
+        <% } %>
+        <a href="/brdlist">목록</a>
+      </div>
+    </div>
+    <%- include("common/footer.ejs") %>
+  </body>
+</html>
