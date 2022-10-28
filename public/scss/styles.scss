@@ -1388,6 +1388,79 @@ body {
 
 //서브페이지 반응형 작업
 @media screen and (max-width: 1200px) {
+  #cont8 {
+    > div.context {
+      text-align: center;
+      margin-top: 100px;
+      h2 {
+        color: #000;
+        margin-bottom: 30px;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+    }
+    .center {
+      width: 95%;
+
+      justify-content: space-around;
+      .card {
+        width: 290px;
+
+        .midbar {
+          img {
+            left: 0px;
+          }
+          .context {
+            > p {
+              margin-right: 10px;
+            }
+            .icons {
+              a {
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #cont7 {
+    .center {
+      width: 95%;
+      justify-content: space-around;
+      .card {
+        width: 290px;
+      }
+    }
+  }
+
+  #cont6 {
+    .cards {
+      width: 95%;
+      justify-content: space-around;
+      .card {
+        width: 210px;
+      }
+    }
+  }
+
+  #cont4 {
+    .center {
+      width: 100%;
+      .places {
+        width: 95%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  #cont5 {
+    .center {
+      width: 90%;
+    }
+  }
   .h-top {
     background: #202040;
     .condition {
@@ -1398,6 +1471,8 @@ body {
     width: 100%;
     .logo {
       line-height: 100px;
+      position: relative;
+      top: -4px;
       a {
         color: gray;
         font-size: 24px;
@@ -1607,6 +1682,25 @@ body {
 }
 
 @media screen and (max-width: 580px) {
+  #footer {
+    .f-top {
+      width: 80%;
+
+      .top1 {
+        width: 100%;
+      }
+      .top2 {
+        width: 100%;
+      }
+      .top3 {
+        width: 100%;
+      }
+      .top4 {
+        width: 100%;
+        margin-top: 40px;
+      }
+    }
+  }
   #slider {
     .view > div {
       font-size: 32px;

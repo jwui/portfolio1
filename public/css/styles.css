@@ -1357,6 +1357,57 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+  #cont8 > div.context {
+    text-align: center;
+    margin-top: 100px;
+  }
+  #cont8 > div.context h2 {
+    color: #000;
+    margin-bottom: 30px;
+  }
+  #cont8 > div.context p {
+    margin-bottom: 30px;
+  }
+  #cont8 .center {
+    width: 95%;
+    justify-content: space-around;
+  }
+  #cont8 .center .card {
+    width: 290px;
+  }
+  #cont8 .center .card .midbar img {
+    left: 0px;
+  }
+  #cont8 .center .card .midbar .context > p {
+    margin-right: 10px;
+  }
+  #cont8 .center .card .midbar .context .icons a {
+    margin-right: 10px;
+  }
+  #cont7 .center {
+    width: 95%;
+    justify-content: space-around;
+  }
+  #cont7 .center .card {
+    width: 290px;
+  }
+  #cont6 .cards {
+    width: 95%;
+    justify-content: space-around;
+  }
+  #cont6 .cards .card {
+    width: 210px;
+  }
+  #cont4 .center {
+    width: 100%;
+  }
+  #cont4 .center .places {
+    width: 95%;
+    margin: 0 auto;
+  }
+  #cont5 .center {
+    width: 90%;
+  }
   .h-top {
     background: #202040;
   }
@@ -1368,6 +1419,8 @@ body {
   }
   .h-bot .logo {
     line-height: 100px;
+    position: relative;
+    top: -4px;
   }
   .h-bot .logo a {
     color: gray;
@@ -1530,6 +1583,22 @@ body {
   }
 }
 @media screen and (max-width: 580px) {
+  #footer .f-top {
+    width: 80%;
+  }
+  #footer .f-top .top1 {
+    width: 100%;
+  }
+  #footer .f-top .top2 {
+    width: 100%;
+  }
+  #footer .f-top .top3 {
+    width: 100%;
+  }
+  #footer .f-top .top4 {
+    width: 100%;
+    margin-top: 40px;
+  }
   #slider .view > div {
     font-size: 32px;
   }
