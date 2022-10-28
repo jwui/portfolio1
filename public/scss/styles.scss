@@ -221,7 +221,6 @@ body {
       background-color: rgba(0, 0, 0, 0.8);
       z-index: 1;
     }
-
     .content {
       color: #fff;
       border: 10px solid #555;
@@ -283,6 +282,11 @@ body {
   justify-content: center;
   z-index: 10;
   width: 100%;
+  .hamburgerMenu {
+    img {
+      display: none;
+    }
+  }
 }
 .h-bot .center {
   width: 900px;
@@ -347,7 +351,7 @@ body {
 
 #subpage_container {
   .cont1 {
-    padding-top: 145px;
+    padding-top: 70px;
     .bg {
       background-image: url("/img/bg.jpg");
       background-position: center;
@@ -439,6 +443,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
   .view > div:nth-child(1) {
     background-image: url("/img/slide1.jpg");
@@ -1303,9 +1308,13 @@ body {
 
 #mypage_container {
   .center {
-    width: 500px;
+    width: 400px;
     margin: 0 auto;
     margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h2 {
       font-size: 48px;
@@ -1315,6 +1324,13 @@ body {
     > form {
       display: flex;
       flex-direction: column;
+      border: 1px solid #666;
+      width: 440px;
+      border-radius: 5px;
+      > div {
+        margin-top: 40px;
+        margin-left: 20px;
+      }
       label {
         display: block;
         padding-top: 50px;
@@ -1328,6 +1344,9 @@ body {
         background-color: #9754cb;
         padding: 15px 15px;
         border-radius: 5px;
+        width: 40%;
+        margin: 20px auto;
+        margin-top: 30px;
       }
       a {
         color: #fff;
@@ -1338,26 +1357,28 @@ body {
         padding: 15px 15px;
         border-radius: 5px;
         text-align: center;
+        width: 33%;
+        margin: 20px auto;
+        margin-top: 0px;
       }
       input {
         font-family: "Noto Sans KR";
         margin-top: 20px;
-        width: 500px;
+        width: 400px;
         line-height: 50px;
         text-indent: 30px;
-        border-left: none;
-        border-right: none;
+        left: 20px;
+        position: relative;
         border-color: #666;
+        border-radius: 5px;
       }
       textarea {
         font-family: "Noto Sans KR";
         padding-top: 30px;
         padding-left: 30px;
         margin-top: 20px;
-        width: 500px;
+        width: 400px;
         height: 300px;
-        border-left: none;
-        border-right: none;
         resize: none;
         border-color: #666;
       }
@@ -1365,36 +1386,272 @@ body {
   }
 }
 
-// <div id="mypage_container">
-//       <h2>회원정보 수정</h2>
-//       <form action="/myupdate" method="post">
-//         <!--아이디 표시-->
-//         <div><%- userData.joinname %></div>
-//         <!--원래 비밀번호 입력할 input 태그 있어야함-->
-//         <input
-//           type="password"
-//           name="passorigin"
-//           placeholder="원래 비밀번호 입력"
-//         />
-//         <input
-//           type="password"
-//           name="userpass"
-//           placeholder="변경할 비밀번호 입력"
-//         />
-//         <input
-//           type="text"
-//           name="username"
-//           placeholder="변경할 이름 입력"
-//           value="<%- userData.joinname %>"
-//         />
-//         <button type="submit">회원정보 수정</button>
-//         <!--취소버튼 누르면 메인페이지로 이동-->
-//       </form>
-//       <script>
-//         //비번/닉네임/전화번호/이메일 정규식 표현(무조건 뭔가를 입력하게끔) -> 연습
+//서브페이지 반응형 작업
+@media screen and (max-width: 1200px) {
+  .h-top {
+    background: #202040;
+    .condition {
+      width: 100%;
+    }
+  }
+  .h-bot {
+    width: 100%;
+    .logo {
+      line-height: 100px;
+      a {
+        color: gray;
+        font-size: 24px;
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+  #subpage_container {
+    .cont1 {
+      .center {
+        width: 950px;
+      }
+    }
+    .cont2 {
+      .center {
+        width: 950px;
 
-//         //취소버튼 누르면
-//         // alert("메인페이지로 이동합니다");
-//         // location.href = "/";
-//       </script>
-//     </div>
+        .cards {
+          .card {
+            width: 280px;
+            margin: 20px 10px;
+          }
+        }
+      }
+    }
+  }
+  .cont4 {
+    .center {
+      width: 950px;
+      .cards {
+        .card {
+          width: 280px;
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #login_container {
+    width: 480px;
+    border-radius: 10px;
+    .right {
+      display: none;
+    }
+  }
+  #slider {
+    .view > div {
+      font-size: 36px;
+    }
+  }
+  #join_container {
+    width: 480px;
+    border-radius: 10px;
+    .right {
+      display: none;
+    }
+  }
+  #footer {
+    .f-top {
+      width: 80%;
+      flex-wrap: wrap;
+
+      .top1 {
+        width: 50%;
+        margin-bottom: 40px;
+      }
+      .top2 {
+        width: 50%;
+        margin-bottom: 40px;
+      }
+      .top3 {
+        width: 50%;
+      }
+      .top4 {
+        width: 50%;
+        a {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .h-top {
+    display: none;
+  }
+  .h-bot .logo {
+    line-height: 70px;
+    a {
+      color: gray;
+    }
+    img {
+      display: none;
+    }
+  }
+  .h-bot {
+    width: 70%;
+    margin: 0 auto;
+    .hamburgerMenu {
+      img {
+        display: block;
+        width: 50px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .h-bot .center .gnbWrap .gnb > li {
+    display: none;
+  }
+  #subpage_container {
+    .cont1 {
+      .center {
+        width: 700px;
+        display: flex;
+        flex-wrap: wrap;
+        .video {
+          width: 100%;
+          iframe {
+            width: 100%;
+          }
+        }
+        .context {
+          width: 100%;
+          margin-top: 60px;
+          text-align: center;
+        }
+      }
+    }
+    .cont2 {
+      .center {
+        width: 700px;
+        .cards {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          .card {
+            margin: 15px;
+          }
+          button {
+            width: 60%;
+          }
+        }
+      }
+    }
+    .cont4 {
+      .center {
+        width: 700px;
+        .cards {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          .card {
+            width: 320px;
+            margin: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #subpage_container {
+    .cont1 {
+      .center {
+        width: 600px;
+      }
+    }
+    .cont2 {
+      .center {
+        width: 600px;
+        .cards {
+          width: 100%;
+          .card {
+            margin: 20px;
+            width: 80%;
+          }
+          button {
+            width: 180px;
+          }
+        }
+      }
+    }
+    .cont4 {
+      .center {
+        width: 600px;
+        .cards {
+          .card {
+            width: 100%;
+            margin: 10px;
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  }
+  #footer {
+    .f-bot {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #slider {
+    .view > div {
+      font-size: 32px;
+    }
+  }
+  #subpage_container {
+    .cont1 {
+      .center {
+        width: 90%;
+      }
+    }
+    .cont2 {
+      .center {
+        width: 90%;
+        .cards {
+          width: 100%;
+          .card {
+            margin: 20px;
+            width: 100%;
+          }
+          button {
+            width: 140px;
+          }
+        }
+      }
+    }
+    .cont4 {
+      .center {
+        width: 100%;
+        .cards {
+          .card {
+            width: 90%;
+            margin: 10px;
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  #footer {
+    .f-bot {
+      p {
+        font-size: 10px;
+      }
+    }
+  }
+}
