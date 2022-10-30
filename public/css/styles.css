@@ -250,6 +250,9 @@ body {
 #header a:hover {
   font-weight: bold;
 }
+#header .clickNav {
+  display: none;
+}
 
 .h-top {
   background: #202040;
@@ -582,14 +585,16 @@ body {
   align-items: center;
 }
 #list_container .bg .context {
-  font-size: 48px;
+  font-size: 32px;
   color: #fff;
+  text-align: center;
 }
 #list_container .brd_center {
-  width: 1100px;
+  max-width: 1100px;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 auto;
   margin-top: 100px;
 }
@@ -660,7 +665,8 @@ body {
   font-weight: bold;
 }
 #list_container .btn {
-  width: 1100px;
+  max-width: 1100px;
+  width: 90%;
   margin: 50px auto;
   display: flex;
   justify-content: flex-end;
@@ -676,7 +682,8 @@ body {
 }
 
 #detail_container .brd_center {
-  width: 1100px;
+  max-width: 1100px;
+  width: 90%;
   margin: 0 auto;
   margin-top: 300px;
   color: #666;
@@ -717,7 +724,7 @@ body {
   line-height: 2;
 }
 #detail_container .buttons {
-  width: 1100px;
+  width: 90%;
   display: flex;
   justify-content: flex-end;
   margin: 0 auto;
@@ -734,7 +741,8 @@ body {
 }
 
 #upt_container .brdupt {
-  width: 1100px;
+  max-width: 1100px;
+  width: 90%;
   margin: 0 auto;
   margin-top: 300px;
 }
@@ -760,22 +768,21 @@ body {
 #upt_container .brdupt input {
   font-family: "Noto Sans KR";
   margin-top: 20px;
-  width: 1100px;
+  max-width: 1100px;
+  width: 100%;
   line-height: 50px;
   text-indent: 30px;
-  border-left: none;
-  border-right: none;
+  border-radius: 5px;
   border-color: #666;
 }
 #upt_container .brdupt textarea {
   font-family: "Noto Sans KR";
-  padding-top: 30px;
-  padding-left: 30px;
+  padding: 30px;
   margin-top: 20px;
-  width: 1100px;
+  max-width: 1100px;
+  width: 100%;
   height: 300px;
-  border-left: none;
-  border-right: none;
+  border-radius: 5px;
   resize: none;
   border-color: #666;
 }
@@ -835,7 +842,8 @@ body {
 }
 
 #insert_container .brd_center {
-  width: 1100px;
+  max-width: 1100px;
+  width: 90%;
   margin: 0 auto;
   margin-top: 300px;
 }
@@ -872,11 +880,11 @@ body {
 #insert_container .brd_center form input {
   font-family: "Noto Sans KR";
   margin-top: 20px;
-  width: 1100px;
+  max-width: 1100px;
+  width: 100%;
   line-height: 50px;
   text-indent: 30px;
-  border-left: none;
-  border-right: none;
+  border-radius: 5px;
   border-color: #666;
 }
 #insert_container .brd_center form textarea {
@@ -884,10 +892,10 @@ body {
   padding-top: 30px;
   padding-left: 30px;
   margin-top: 20px;
-  width: 1100px;
+  max-width: 1100px;
+  width: 100%;
   height: 300px;
-  border-left: none;
-  border-right: none;
+  border-radius: 5px;
   resize: none;
   border-color: #666;
 }
@@ -1223,7 +1231,8 @@ body {
 }
 #cont8 .center {
   margin: 100px auto;
-  width: 1100px;
+  max-width: 1100px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -1357,6 +1366,68 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+  #index_container .cont2 {
+    background-color: #f9f9f9;
+    padding: 100px 0;
+  }
+  #index_container .cont2 .center {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #index_container .cont2 .center .context {
+    text-align: center;
+  }
+  #index_container .cont2 .center .context h2 {
+    margin-bottom: 26px;
+    color: #000;
+  }
+  #index_container .cont2 .center .context p {
+    margin-bottom: 46px;
+  }
+  #index_container .cont2 .center .inner {
+    display: flex;
+  }
+  #index_container .cont2 .center .inner .left {
+    width: 50%;
+  }
+  #index_container .cont2 .center .inner .left img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+  #index_container .cont2 .center .inner .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #index_container .cont2 .center .inner .right .card {
+    width: 90%;
+    display: flex;
+    background-color: #fff;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+  }
+  #index_container .cont2 .center .inner .right .card i {
+    display: flex;
+    font-size: 64px;
+    margin-right: 24px;
+    align-items: center;
+    color: #274abb;
+  }
+  #index_container .cont2 .center .inner .right .card h2 {
+    color: #000;
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+  #index_container .cont2 .center .inner .right .card p {
+    line-height: 1.5;
+  }
+  #index_container .cont2 .center .inner .right :last-of-type {
+    margin-bottom: 0;
+  }
   #cont8 > div.context {
     text-align: center;
     margin-top: 100px;
@@ -1373,7 +1444,7 @@ body {
     justify-content: space-around;
   }
   #cont8 .center .card {
-    width: 290px;
+    width: 30%;
   }
   #cont8 .center .card .midbar img {
     left: 0px;
@@ -1389,16 +1460,17 @@ body {
     justify-content: space-around;
   }
   #cont7 .center .card {
-    width: 290px;
+    width: 30%;
   }
   #cont6 .cards {
     width: 95%;
     justify-content: space-around;
   }
   #cont6 .cards .card {
-    width: 210px;
+    width: 23%;
   }
   #cont4 .center {
+    max-width: 1100px;
     width: 100%;
   }
   #cont4 .center .places {
@@ -1448,6 +1520,28 @@ body {
   }
 }
 @media screen and (max-width: 1000px) {
+  #cont8 .center {
+    width: 95%;
+  }
+  #cont8 .center .card3 {
+    display: none;
+  }
+  #cont8 .center .card {
+    width: 46%;
+  }
+  #index_container .cont2 .center {
+    width: 100%;
+  }
+  #index_container .cont2 .center .inner .left {
+    display: none;
+  }
+  #index_container .cont2 .center .inner .right {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #index_container .cont2 .center .inner .right .card {
+    width: 100%;
+  }
   #login_container {
     width: 480px;
     border-radius: 10px;
@@ -1486,9 +1580,6 @@ body {
   #footer .f-top .top4 a {
     display: inline-block;
   }
-  .h-top {
-    display: none;
-  }
   .h-bot .logo {
     line-height: 70px;
   }
@@ -1502,10 +1593,54 @@ body {
     width: 70%;
     margin: 0 auto;
   }
+  .h-bot .hamburgerMenu {
+    z-index: 30;
+  }
   .h-bot .hamburgerMenu img {
     display: block;
     width: 50px;
     margin-top: 10px;
+    z-index: 30;
+  }
+  #header .clickNav.active {
+    left: 0%;
+  }
+  #header .clickNav {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: -100%;
+    top: 0;
+    z-index: 10;
+    transition: all 0.5s;
+    display: block;
+  }
+  #header .clickNav .bg {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 1;
+  }
+  #header .clickNav ul {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+  }
+  #header .clickNav ul li a {
+    color: #fff;
+    font-size: 48px;
+    line-height: 2;
+    font-weight: 400;
+  }
+  #header .clickNav ul li a:hover {
+    color: #274abb;
+    animation: ease-in;
+    transition: all 0.3s;
+    font-weight: 400;
   }
   .h-bot .center .gnbWrap .gnb > li {
     display: none;
@@ -1554,6 +1689,68 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
+  #cont8 .center {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+  #cont8 .center .card {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  #cont8 .center .card .midbar img {
+    left: 15px;
+  }
+  #cont8 .center .card3 {
+    display: block;
+  }
+  #cont7 {
+    height: auto;
+    padding: 100px 0;
+  }
+  #cont7 .center {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #cont7 .center .card {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+  #cont6 .cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+  #cont6 .cards .card {
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 60px;
+  }
+  #cont5 {
+    height: auto;
+    padding: 100px;
+  }
+  #cont5 .center {
+    flex-direction: column;
+  }
+  #cont5 .center .card {
+    width: 100%;
+    flex-direction: column;
+  }
+  #cont5 .center .card i {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  #cont5 .center .card .contents {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #cont5 .center .card .contents h2 {
+    margin-bottom: 10px;
+  }
   #subpage_container .cont1 .center {
     width: 600px;
   }
@@ -1581,8 +1778,52 @@ body {
   #footer .f-bot p {
     font-size: 14px;
   }
+  #cont4 .center {
+    width: 100%;
+  }
+  #cont4 .center .places {
+    width: 95%;
+    margin: 0 auto;
+  }
+  #cont4 .center .places .place {
+    width: 48%;
+  }
+  #cont4 .center .places .place:nth-of-type(3) {
+    margin-right: 2%;
+  }
+  #cont4 .center .places .place:nth-of-type(4) {
+    width: 48%;
+  }
 }
 @media screen and (max-width: 580px) {
+  #cont4 .center {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #cont4 .center .places {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+  #cont4 .center .places .place {
+    margin-bottom: 6%;
+    width: 100%;
+  }
+  #cont4 .center .places .place:nth-of-type(1) {
+    margin-right: 0;
+  }
+  #cont4 .center .places .place:nth-of-type(2) {
+    margin-right: 0;
+  }
+  #cont4 .center .places .place:nth-of-type(3) {
+    margin-right: 0;
+  }
+  #cont4 .center .places .place:nth-of-type(4) {
+    margin-right: 0;
+    width: 100%;
+  }
+  #cont4 .center .places .place:nth-of-type(5) {
+    margin-right: 0;
+  }
   #footer .f-top {
     width: 80%;
   }

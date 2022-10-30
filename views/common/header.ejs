@@ -76,6 +76,15 @@
       <img src="/img/hamburger.png" />
     </div>
   </div>
+  <div class="clickNav">
+    <div class="bg"></div>
+    <ul>
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+      <li><a href="#">메뉴4</a></li>
+    </ul>
+  </div>
 </div>
 
 <script>
@@ -105,5 +114,13 @@
     }
     //gnbBg 화면에서 사라지게
     gnbBg.style.display = "none";
+  });
+
+  let hamburgerMenu = document.querySelector(".hamburgerMenu img");
+  let clickNav = document.querySelector("#header .clickNav");
+
+  hamburgerMenu.addEventListener("click", () => {
+    console.log("clicked");
+    clickNav.classList.toggle("active");
   });
 </script>
