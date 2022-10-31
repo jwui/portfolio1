@@ -36,6 +36,8 @@ app.use(express.static("public"));
 app.use(session({ secret: "secret", resave: true, saveUninitialized: false }));
 app.use(passport.initialize());
 app.use(passport.session());
+let flash = require("connect-flash");
+app.use(flash());
 
 //데이터베이스 연결작업
 
@@ -262,7 +264,7 @@ app.get("/logout", function (req, res) {
   req.session.destroy(function (err) {
     // 요청 -> 세션제거
     res.clearCookie("connect.sid"); // 응답 -> 본인접속 웹브라우저 쿠키 제거
-    res.render("index", { userData: req.user }); // 메인페이지 이동
+    res.redirect("/"); // 메인페이지 이동
   });
 });
 
@@ -274,12 +276,22 @@ app.get("/subpage", function (req, res) {
 //로그인 페이지에서 입력한 아이디 비밀번호 검증 처리 요청
 app.post(
   "/loginresult",
-  passport.authenticate("local", { failureRedirect: "/fail" }),
+  passport.authenticate("local", {
+    failureRedirect: "/fail",
+    failureFlash: true,
+  }),
+  //실패시 /fail 경로로 요청
   function (req, res) {
-    //실패시 /fail 경로로 요청
     res.render("index", { userData: req.user }); //로그인 성공시 메인페이지로 이동
   }
 );
+
+app.get("/fail", function (req, res) {
+  // res.render("fail");
+  res.send(
+    "<script>  alert('아이디나 비밀번호가 잘못되었습니다. 다시 입력해주세요.'); location.href = '/login';</script>"
+  );
+});
 
 //  /loginresult 경로 요청시 passport.autenticate() 함수구간이 아이디 비번 로그인 검증구간
 passport.use(

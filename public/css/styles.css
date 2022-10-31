@@ -56,7 +56,7 @@ body {
   display: flex;
   position: absolute;
   width: 960px;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -91,7 +91,7 @@ body {
   line-height: 50px;
   border-radius: 25px;
   border: none;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   text-indent: 20px;
   transition: all 0.3s;
@@ -150,7 +150,7 @@ body {
   display: flex;
   position: absolute;
   width: 960px;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -185,7 +185,7 @@ body {
   line-height: 50px;
   border-radius: 25px;
   border: none;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   text-indent: 20px;
   transition: all 0.3s;
@@ -258,7 +258,8 @@ body {
   background: #202040;
 }
 .h-top .condition {
-  width: 1100px;
+  max-width: 1100px;
+  width: 90%;
   margin: 0 auto;
   height: 40px;
   line-height: 40px;
@@ -297,7 +298,7 @@ body {
   z-index: 10;
   width: 100%;
 }
-.h-bot .hamburgerMenu img {
+.h-bot .hamburgerMenu {
   display: none;
 }
 
@@ -314,8 +315,8 @@ body {
 .h-bot .center .gnbWrap .gnb > li {
   position: relative;
   width: 180px;
-  height: 100px;
-  line-height: 100px;
+  height: 100%;
+  line-height: 103px;
   text-align: center;
 }
 
@@ -375,6 +376,7 @@ body {
   background-image: url("/img/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 600px;
 }
@@ -394,9 +396,11 @@ body {
 #subpage_container .cont1 .center .context h2 {
   margin-bottom: 20px;
 }
+#subpage_container .cont1 .center .context p {
+  line-height: 2;
+}
 #subpage_container .cont2 {
   background-color: #f9f9f9;
-  margin-top: 200px;
 }
 #subpage_container .cont2 .center {
   width: 1100px;
@@ -409,6 +413,11 @@ body {
 #subpage_container .cont2 .center .context h2 {
   margin-bottom: 20px;
 }
+#subpage_container .cont2 .center .context i {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: rgb(39, 74, 187);
+}
 #subpage_container .cont2 .center .context p {
   margin-bottom: 20px;
 }
@@ -420,16 +429,21 @@ body {
 #subpage_container .cont2 .center .cards .card {
   background-color: #fff;
   width: 320px;
-  height: 240px;
+  height: auto;
   margin: 20px 20px;
   padding: 30px 30px;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+}
+#subpage_container .cont2 .center .cards .card .context h2 {
+  font-size: 20px;
 }
 #subpage_container .cont2 .center .cards .card .context p {
   line-height: 1.5;
 }
-#subpage_container .cont2 .center .cards button {
+#subpage_container .cont2 .center button {
+  display: block;
+  margin: 0 auto;
   border: none;
   padding: 15px 25px;
   background-color: #ecc5fb;
@@ -543,7 +557,7 @@ body {
 .cont4 .center .cards .card {
   width: 320px;
   margin: 20px;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 .cont4 .center .cards .card .photo img {
@@ -601,7 +615,7 @@ body {
 #list_container .brd_center .card {
   width: 320px;
   height: 320px;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   margin: 20px;
 }
@@ -724,6 +738,7 @@ body {
   line-height: 2;
 }
 #detail_container .buttons {
+  max-width: 1100px;
   width: 90%;
   display: flex;
   justify-content: flex-end;
@@ -913,7 +928,7 @@ body {
   height: 600px;
 }
 #index_container .cont1 .context > h2 {
-  font-size: 64px;
+  font-size: 40px;
   font-weight: bold;
   color: #fff;
   margin-bottom: 40px;
@@ -950,7 +965,10 @@ body {
   color: #000;
 }
 #index_container .cont2 .center .context p {
+  margin: 0 auto;
   margin-bottom: 46px;
+  width: 90%;
+  line-height: 1.5;
 }
 #index_container .cont2 .center .inner {
   display: flex;
@@ -1124,7 +1142,7 @@ body {
 }
 #cont6 .cards .card {
   width: 254px;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
 }
 #cont6 .cards .card img {
   width: 100%;
@@ -1162,6 +1180,8 @@ body {
 }
 #cont7 .context {
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 #cont7 .context > h2 {
   color: #fff;
@@ -1209,7 +1229,6 @@ body {
   color: orange;
 }
 #cont7 .center .card .context .stars > p {
-  margin-left: 10px;
   color: gray;
 }
 #cont7 .center .card .context > p {
@@ -1227,7 +1246,10 @@ body {
   margin-bottom: 30px;
 }
 #cont8 > div.context p {
+  width: 90%;
+  margin: 0 auto;
   margin-bottom: 30px;
+  line-height: 1.5;
 }
 #cont8 .center {
   margin: 100px auto;
@@ -1240,7 +1262,7 @@ body {
   width: 350px;
   box-sizing: border-box;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
 }
 #cont8 .center .card img {
   width: 100%;
@@ -1483,9 +1505,6 @@ body {
   .h-top {
     background: #202040;
   }
-  .h-top .condition {
-    width: 100%;
-  }
   .h-bot {
     width: 100%;
   }
@@ -1543,7 +1562,8 @@ body {
     width: 100%;
   }
   #login_container {
-    width: 480px;
+    max-width: 480px;
+    width: 90%;
     border-radius: 10px;
   }
   #login_container .right {
@@ -1553,7 +1573,8 @@ body {
     font-size: 36px;
   }
   #join_container {
-    width: 480px;
+    max-width: 480px;
+    width: 90%;
     border-radius: 10px;
   }
   #join_container .right {
@@ -1581,7 +1602,7 @@ body {
     display: inline-block;
   }
   .h-bot .logo {
-    line-height: 70px;
+    line-height: 100px;
   }
   .h-bot .logo a {
     color: gray;
@@ -1595,12 +1616,21 @@ body {
   }
   .h-bot .hamburgerMenu {
     z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .h-bot .hamburgerMenu img {
-    display: block;
-    width: 50px;
-    margin-top: 10px;
-    z-index: 30;
+  .h-bot .hamburgerMenu .hamburger.is-active .hamburger-box .hamburger-inner::after {
+    transition: all 0.5s;
+    background-color: #fff;
+  }
+  .h-bot .hamburgerMenu .hamburger.is-active .hamburger-box .hamburger-inner::before {
+    transition: all 0.5s;
+    background-color: #fff;
+  }
+  .h-bot .hamburgerMenu .hamburger.is-active .hamburger-box .hamburger-inner {
+    transition: all 0.5s;
+    background-color: #fff;
   }
   #header .clickNav.active {
     left: 0%;
@@ -1632,7 +1662,7 @@ body {
   }
   #header .clickNav ul li a {
     color: #fff;
-    font-size: 48px;
+    font-size: 40px;
     line-height: 2;
     font-weight: 400;
   }
@@ -1673,7 +1703,8 @@ body {
     margin: 15px;
   }
   #subpage_container .cont2 .center .cards button {
-    width: 60%;
+    display: block;
+    height: 45px;
   }
   #subpage_container .cont4 .center {
     width: 700px;

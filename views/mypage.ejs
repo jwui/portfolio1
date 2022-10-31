@@ -1,3 +1,10 @@
+<% if(!userData) { %>
+<script>
+  alert("비회원은 접근할 수 없는 페이지입니다");
+  location.href = "/login";
+</script>
+<% } %>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,12 +15,13 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
+    <%- include("common/header.ejs") %>
     <div id="mypage_container">
       <div class="center">
         <h2>회원정보 수정</h2>
         <form action="/myupdate" method="post">
           <!--아이디 표시-->
-          <div><%- userData.joinname %> 님</div>
+          <div></div>
           <!--원래 비밀번호 입력할 input 태그 있어야함-->
           <input
             type="password"
@@ -30,7 +38,7 @@
             type="text"
             name="username"
             placeholder="변경할 이름 입력"
-            value="<%- userData.joinname %>"
+            value=""
           />
           <button type="submit">회원정보 수정</button>
           <a class="cancelBtn">뒤로가기</a>

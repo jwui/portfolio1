@@ -32,6 +32,15 @@
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
           </div>
         </div>
       </div>
@@ -44,6 +53,7 @@
           <div class="cards">
             <div class="card">
               <div class="context">
+                <i class="fa-solid fa-martini-glass-citrus"></i>
                 <h2>Trusted By Thousands</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -53,6 +63,7 @@
             </div>
             <div class="card">
               <div class="context">
+                <i class="fa-regular fa-circle"></i>
                 <h2>Wide Range of Properties</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -62,6 +73,7 @@
             </div>
             <div class="card">
               <div class="context">
+                <i class="fa-solid fa-cake-candles"></i>
                 <h2>Financing Made Easy</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -71,7 +83,8 @@
             </div>
             <div class="card" style="display: none">
               <div class="context">
-                <h2>Trusted By Thousands</h2>
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h2>Works Like Magic</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -80,7 +93,8 @@
             </div>
             <div class="card" style="display: none">
               <div class="context">
-                <h2>Wide Range of Properties</h2>
+                <i class="fa-brands fa-playstation"></i>
+                <h2>Traveling Made Fun</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -89,15 +103,16 @@
             </div>
             <div class="card" style="display: none">
               <div class="context">
-                <h2>Financing Made Easy</h2>
+                <i class="fa-solid fa-certificate"></i>
+                <h2>We Take Care of Everything</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
             </div>
-            <button>Read More</button>
           </div>
+          <button>Read More</button>
         </div>
       </div>
       <div class="cont3">
@@ -189,11 +204,12 @@
     <%- include("common/footer.ejs") %>
     <script>
       //버튼 클릭시 카드 보이는 기능 구간
-      const readBtn = document.querySelector(".cont2 .center .cards button");
+      const readBtn = document.querySelector(".cont2 .center button");
       const cards = document.querySelectorAll(".cont2 .center .cards .card");
       readBtn.addEventListener("click", () => {
         cards.forEach((item, index) => {
           item.style.display = "block";
+          readBtn.style.display = "none";
         });
       });
 
