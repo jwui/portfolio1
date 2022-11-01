@@ -19,11 +19,12 @@
     <%- include("common/header.ejs") %>
     <div id="index_container">
       <div class="cont1">
+        <video src="/img/videomain.mp4" autoplay loop muted></video>
         <div class="context">
           <h2><div id="app"></div></h2>
           <div class="btns">
-            <a href="#">게시글 페이지로 가기</a>
-            <a href="#">더 알아보기</a>
+            <a href="/brdlist">게시글 페이지로 가기</a>
+            <a href="/subpage">더 알아보기</a>
           </div>
         </div>
       </div>
@@ -37,10 +38,22 @@
             </p>
           </div>
           <div class="inner">
-            <div class="left">
+            <div
+              class="left"
+              data-aos="zoom-in-right"
+              data-aos-duration="500"
+              data-aos-once="true"
+            >
               <img src="/img/img1.jpg" />
             </div>
-            <div class="right">
+            <div
+              class="right"
+              class="left"
+              data-aos="zoom-in-left"
+              data-aos-duration="500"
+              data-aos-once="true"
+              data-aos-delay="200"
+            >
               <div class="card card1">
                 <i class="fa-solid fa-plane"></i>
                 <div>
@@ -155,28 +168,28 @@
           <div class="card card1">
             <i class="fa-solid fa-medal"></i>
             <div class="contents">
-              <h2 id="count1"></h2>
+              <h2 id="count1">0</h2>
               <p>Accolades</p>
             </div>
           </div>
           <div class="card card2">
             <i class="fa-solid fa-person"></i>
             <div class="contents">
-              <h2 id="count2"></h2>
+              <h2 id="count2">0</h2>
               <p>Customers</p>
             </div>
           </div>
           <div class="card card3">
             <i class="fa-brands fa-magento"></i>
             <div class="contents">
-              <h2 id="count3"></h2>
+              <h2 id="count3">0</h2>
               <p>Agents</p>
             </div>
           </div>
           <div class="card card4">
             <i class="fa-solid fa-plane"></i>
             <div class="contents">
-              <h2 id="count4"></h2>
+              <h2 id="count4">0</h2>
               <p>Airlines</p>
             </div>
           </div>
@@ -188,7 +201,13 @@
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="cards">
-          <div class="card card1">
+          <div
+            class="card card1"
+            data-aos="fade-right"
+            data-aos-duration="500"
+            data-aos-once="true"
+            data-aos-delay="0"
+          >
             <img src="/img/staff1.jpg" />
             <div class="contents">
               <h3>Maria Blank</h3>
@@ -201,7 +220,13 @@
               </div>
             </div>
           </div>
-          <div class="card card2">
+          <div
+            class="card card2"
+            data-aos="fade-right"
+            data-aos-duration="500"
+            data-aos-once="true"
+            data-aos-delay="200"
+          >
             <img src="/img/staff2.jpg" />
             <div class="contents">
               <h3>Karen Paran</h3>
@@ -214,7 +239,13 @@
               </div>
             </div>
           </div>
-          <div class="card card3">
+          <div
+            class="card card3"
+            data-aos="fade-right"
+            data-aos-duration="500"
+            data-aos-once="true"
+            data-aos-delay="400"
+          >
             <img src="/img/staff3.jpg" />
             <div class="contents">
               <h3>Martin Smith</h3>
@@ -227,7 +258,13 @@
               </div>
             </div>
           </div>
-          <div class="card card4">
+          <div
+            class="card card4"
+            data-aos="fade-right"
+            data-aos-duration="500"
+            data-aos-once="true"
+            data-aos-delay="600"
+          >
             <img src="/img/staff4.jpg" />
             <div class="contents">
               <h3>Jordan Peterson</h3>
@@ -313,7 +350,12 @@
           </p>
         </div>
         <div class="center">
-          <div class="card card1">
+          <div
+            class="card card1"
+            data-aos="fade-in"
+            data-aos-duration="500"
+            data-aos-once="true"
+          >
             <img src="/img/blog1.jpg" />
             <div class="midbar">
               <img src="img/staff1.jpg" />
@@ -333,7 +375,13 @@
               </p>
             </div>
           </div>
-          <div class="card card2">
+          <div
+            class="card card2"
+            data-aos="fade-in"
+            data-aos-duration="500"
+            data-aos-once="true"
+            data-aos-delay="200"
+          >
             <img src="/img/blog2.jpg" />
             <div class="midbar">
               <img src="img/staff3.jpg" />
@@ -353,7 +401,13 @@
               </p>
             </div>
           </div>
-          <div class="card card3">
+          <div
+            class="card card3"
+            data-aos="fade-in"
+            data-aos-duration="500"
+            data-aos-once="true"
+            data-aos-delay="400"
+          >
             <img src="/img/blog3.jpg" />
             <div class="midbar">
               <img src="img/staff2.jpg" />
@@ -377,6 +431,29 @@
       </div>
     </div>
     <%- include("common/footer.ejs") %>
+    <script>
+      let countUpCont = document.querySelector("#cont5");
+      let view = Math.round(window.innerHeight) / 2;
+      let active = false;
+      console.log(view);
+      window.addEventListener("scroll", () => {
+        console.log(window.scrollY);
+        console.log(countUpCont.offsetTop);
+        if (window.scrollY >= countUpCont.offsetTop - view) {
+          if (active == false) {
+            var counter1 = new CountUp("count1", 0, 989, 0, 8, {});
+            counter1.start();
+            var counter2 = new CountUp("count2", 0, 23907, 0, 5);
+            counter2.start();
+            var counter3 = new CountUp("count3", 0, 34, 0, 10);
+            counter3.start();
+            var counter4 = new CountUp("count4", 0, 176, 0, 10);
+            counter4.start();
+            active = true;
+          }
+        }
+      });
+    </script>
     <script src="/js/countUp.js"></script>
     <script src="/js/typewriter.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

@@ -11,7 +11,15 @@
     <%- include("common/header.ejs") %>
     <div id="subpage_container">
       <div class="cont1">
-        <div class="bg"></div>
+        <div class="bg">
+          <video src="/img/video.mp4" autoplay loop muted></video>
+          <div class="context">
+            <h2>여행을 가볍게</h2>
+            <div class="btn">
+              <a href="/">메인페이지로 가기</a>
+            </div>
+          </div>
+        </div>
         <div class="center">
           <div class="video">
             <iframe
@@ -232,7 +240,7 @@
         }
         handlePager();
         idx[sliderNumber].classList.add("on");
-        handeSlides();
+        handleSlides();
       });
 
       rightBtn.addEventListener("click", () => {
@@ -241,12 +249,21 @@
         } else {
           sliderNumber++;
         }
-
-        //함수로 코드 정리할 부분
         handlePager();
         idx[sliderNumber].classList.add("on");
-        handeSlides();
+        handleSlides();
       });
+
+      let loopInterval = setInterval(() => {
+        if (sliderNumber == sliderLast - 1) {
+          sliderNumber = 0;
+        } else {
+          sliderNumber++;
+        }
+        handlePager();
+        idx[sliderNumber].classList.add("on");
+        handleSlides();
+      }, 3000);
 
       for (let i = 0; i < idx.length; i++) {
         idx[i].addEventListener("click", (e) => {
@@ -254,7 +271,7 @@
           handlePager();
           e.currentTarget.classList.add("on");
           sliderNumber = e.currentTarget.getAttribute("data-index");
-          handeSlides();
+          handleSlides();
         });
       }
 
@@ -264,7 +281,7 @@
         }
       }
 
-      function handeSlides() {
+      function handleSlides() {
         sliderView.style.marginLeft = -100 * sliderNumber + "%";
       }
     </script>

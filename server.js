@@ -66,37 +66,49 @@ app.get("/join", function (req, res) {
 //회원가입 페이지에서 보내준 데이터를 db에 저장요청
 app.post("/joinresult", function (req, res) {
   db.collection("port1_join").findOne(
-    { joinemail: req.body.useremail },
+    { joinname: req.body.username },
     function (err, result) {
-      //db베이스에서 해당 회원아이디가 존재하는경우
+      //db베이스에서 해당 회원닉네임이 존재하는경우
       if (result) {
         res.send(
-          "<script>alert('이미 가입된 이메일입니다'); location.href='/join'; </script>"
+          "<script>alert('이미 존재하는 닉네임입니다'); location.href='/join'; </script>"
         );
       } else {
-        db.collection("port1_count").findOne(
-          { name: "회원정보" },
+        db.collection("port1_join").findOne(
+          { joinemail: req.body.useremail },
           function (err, result) {
-            db.collection("port1_join").insertOne(
-              {
-                joinno: result.joinCount + 1,
-                joinname: req.body.username,
-                joinemail: req.body.useremail,
-                joinpass: req.body.userpass,
-                //프로퍼티명 작명하고 값은 이메일,전화번호 값 추가
-              },
-              function (err, result) {
-                db.collection("port1_count").updateOne(
-                  { name: "회원정보" },
-                  { $inc: { joinCount: 1 } },
-                  function (err, result) {
-                    res.send(
-                      "<script>alert('회원가입이 완료되었습니다.'); location.href='/login'; </script>"
-                    );
-                  }
-                );
-              }
-            );
+            //db베이스에서 해당 회원아이디가 존재하는경우
+            if (result) {
+              res.send(
+                "<script>alert('이미 가입된 이메일입니다'); location.href='/join'; </script>"
+              );
+            } else {
+              db.collection("port1_count").findOne(
+                { name: "회원정보" },
+                function (err, result) {
+                  db.collection("port1_join").insertOne(
+                    {
+                      joinno: result.joinCount + 1,
+                      joinname: req.body.username,
+                      joinemail: req.body.useremail,
+                      joinpass: req.body.userpass,
+                      //프로퍼티명 작명하고 값은 이메일,전화번호 값 추가
+                    },
+                    function (err, result) {
+                      db.collection("port1_count").updateOne(
+                        { name: "회원정보" },
+                        { $inc: { joinCount: 1 } },
+                        function (err, result) {
+                          res.send(
+                            "<script>alert('회원가입이 완료되었습니다.'); location.href='/login'; </script>"
+                          );
+                        }
+                      );
+                    }
+                  );
+                }
+              );
+            }
           }
         );
       }
@@ -183,26 +195,38 @@ app.post("/myupdate", function (req, res) {
   //db에 있는 로그인한 유저의 비밀번호값은 findOne으로 찾아와서
   //if(mypage에서 입력한 비번과 db에 있는 비밀번호가 똑같다면)
   db.collection("port1_join").findOne(
-    { joinpass: req.user.joinpass },
+    { joinname: req.body.username },
     function (err, result) {
-      if (req.body.passorigin == result.joinpass) {
-        db.collection("port1_join").updateOne(
-          { joinname: req.user.joinname },
-          {
-            $set: {
-              joinname: req.body.username,
-              joinpass: req.body.userpass,
-            },
-          },
-          function (err, result) {
-            res.send(
-              "<script>alert('회원정보 수정완료'); location.href='/';</script>"
-            );
-          }
+      if (result) {
+        //db베이스에 회원 닉네임이 이미 존재하는 경우
+        res.send(
+          "<script>alert('이미 존재하는 닉네임입니다'); location.href='/mypage';</script>"
         );
       } else {
-        res.send(
-          "<script>alert('현재 비밀번호를 잘못 입력하셨습니다.'); location.href='/mypage';</script>"
+        db.collection("port1_join").findOne(
+          { joinpass: req.user.joinpass },
+          function (err, result) {
+            if (req.body.passorigin == result.joinpass) {
+              db.collection("port1_join").updateOne(
+                { joinname: req.user.joinname },
+                {
+                  $set: {
+                    joinname: req.body.username,
+                    joinpass: req.body.userpass,
+                  },
+                },
+                function (err, result) {
+                  res.send(
+                    "<script>alert('회원정보 수정완료'); location.href='/';</script>"
+                  );
+                }
+              );
+            } else {
+              res.send(
+                "<script>alert('현재 비밀번호를 잘못 입력하셨습니다'); location.href='/mypage';</script>"
+              );
+            }
+          }
         );
       }
     }
