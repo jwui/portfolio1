@@ -45,7 +45,11 @@
             >
             <div class="info">
               <p><%- brdData[i].brdprice %></p>
-              <div class="req"><span>최소인원: 4명</span></div>
+              <div class="req">
+                <span
+                  >최소인원: <%- 3 + Math.floor(Math.random() * 10) %>명</span
+                >
+              </div>
             </div>
             <p><%- brdData[i].brdauther %></p>
           </div>
