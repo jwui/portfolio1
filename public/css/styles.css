@@ -971,6 +971,7 @@ body {
 }
 #index_container .cont1 .context {
   position: absolute;
+  text-align: center;
 }
 #index_container .cont1 .context > h2 {
   font-size: 44px;

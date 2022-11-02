@@ -6,7 +6,7 @@ var typewriter = new Typewriter(app, {
   deleteSpeed: 100,
 });
 
-typewriter.typeString("당신을 위한 최고의 여행").pauseFor(2000).start();
+typewriter.typeString("내가 꿈꾸는 여행").pauseFor(2000).start();
 
 var app1 = document.getElementById("app1");
 
