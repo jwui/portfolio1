@@ -429,6 +429,30 @@
           </div>
         </div>
       </div>
+      <div id="cont9">
+        <div class="context">
+          <h2>Our Partners</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="view">
+          <div class="slide1">
+            <div class="img">
+              <img src="/img/company1.webp" />
+              <img src="/img/company1.webp" />
+              <img src="/img/company1.webp" />
+              <img src="/img/company1.webp" />
+            </div>
+          </div>
+          <div class="slide2">
+            <div class="img">
+              <img src="/img/company2.png" />
+              <img src="/img/company2.png" />
+              <img src="/img/company2.png" />
+              <img src="/img/company2.png" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <%- include("common/footer.ejs") %>
     <script>
@@ -453,6 +477,53 @@
           }
         }
       });
+
+      const slide1 = document.querySelector("#cont9 .view .slide1 ");
+
+      let i = 0;
+      let xSize = window.innerWidth * 2;
+
+      let moveSlideRight = () => {
+        slide1.style.marginLeft = -i + "px";
+        if (i >= xSize) {
+          clearInterval(autoMove);
+          autoMove = setInterval(() => {
+            moveSlideLeft();
+          }, 1);
+        }
+        i++;
+      };
+
+      let moveSlideLeft = () => {
+        slide1.style.marginLeft = -i + "px";
+        if (i <= 0) {
+          clearInterval(autoMove);
+          i = 0;
+          autoMove = setInterval(() => {
+            moveSlideRight();
+          }, 1);
+        }
+        i--;
+      };
+
+      let autoMove = setInterval(() => {
+        moveSlideRight();
+      }, 1);
+
+      // moveSlideRight = setInterval(() => {
+      //   slide1.style.marginLeft = -i + "px";
+      //   if (i >= xSize) {
+      //     clearInterval(moveSlideRight);
+      //     moveSlideLeft = setInterval(() => {
+      //       slide1.style.marginLeft = -i + "px";
+      //       if (i == 0) {
+      //         clearInterval(moveSlideLeft);
+      //       }
+      //       i--;
+      //     }, 1);
+      //   }
+      //   i++;
+      // }, 1);
     </script>
     <script src="/js/countUp.js"></script>
     <script src="/js/typewriter.js"></script>

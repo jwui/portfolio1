@@ -216,7 +216,7 @@ body {
   color: #fff;
 }
 #join_container .right {
-  background-image: url("/img/login.jpg");
+  background-image: url("/img/register.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -423,6 +423,7 @@ body {
 }
 #subpage_container .cont1 .center .context h2 {
   margin-bottom: 20px;
+  color: #000;
 }
 #subpage_container .cont1 .center .context p {
   line-height: 2;
@@ -439,6 +440,7 @@ body {
   text-align: center;
 }
 #subpage_container .cont2 .center .context h2 {
+  color: #000;
   margin-bottom: 20px;
 }
 #subpage_container .cont2 .center .context i {
@@ -474,9 +476,11 @@ body {
   margin: 0 auto;
   border: none;
   padding: 15px 25px;
-  background-color: #ecc5fb;
+  background-color: #4682b4;
   border-radius: 25px;
   margin-top: 40px;
+  color: #fff;
+  font-weight: bold;
 }
 
 #slider {
@@ -718,7 +722,7 @@ body {
   justify-content: flex-end;
 }
 #list_container .btn > a {
-  background-color: #9754cb;
+  background-color: #4682b4;
   padding: 15px 15px;
   border-radius: 5px;
   font-size: 16px;
@@ -768,7 +772,6 @@ body {
   margin: 20px 0;
   margin-bottom: 40px;
   line-height: 2;
-  white-space: pre-wrap;
 }
 #detail_container .buttons {
   max-width: 1100px;
@@ -779,7 +782,7 @@ body {
   margin-bottom: 100px;
 }
 #detail_container .buttons a {
-  background-color: #9754cb;
+  background-color: #4682b4;
   padding: 15px 15px;
   border-radius: 5px;
   font-size: 16px;
@@ -808,7 +811,7 @@ body {
   color: #fff;
   font-weight: bold;
   border: none;
-  background-color: #9754cb;
+  background-color: #4682b4;
   padding: 15px 15px;
   border-radius: 5px;
   font-size: 16px;
@@ -860,6 +863,9 @@ body {
   color: #c5cbcf;
   display: block;
   line-height: 2;
+}
+#footer .f-top a:hover {
+  font-weight: bold;
 }
 #footer .f-top i {
   font-size: 20px;
@@ -915,7 +921,7 @@ body {
   font-weight: bold;
   font-size: 16px;
   border: none;
-  background-color: #9754cb;
+  background-color: #4682b4;
   padding: 15px 15px;
   border-radius: 5px;
 }
@@ -925,7 +931,7 @@ body {
   font-weight: bold;
   font-size: 16px;
   border: none;
-  background-color: #9754cb;
+  background-color: #4682b4;
   padding: 15px 15px;
   border-radius: 5px;
   margin-left: 20px;
@@ -1392,7 +1398,7 @@ body {
   font-weight: bold;
   font-size: 16px;
   border: none;
-  background-color: #9754cb;
+  background-color: #4682b4;
   padding: 15px 15px;
   border-radius: 5px;
   width: 40%;
@@ -1404,7 +1410,7 @@ body {
   font-weight: bold;
   font-size: 16px;
   border: none;
-  background-color: #9754cb;
+  background-color: #4682b4;
   padding: 15px 15px;
   border-radius: 5px;
   text-align: center;
@@ -1432,6 +1438,55 @@ body {
   height: 300px;
   resize: none;
   border-color: #666;
+}
+
+#cont9 {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 60px;
+}
+#cont9 .context h2 {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  color: #000;
+}
+#cont9 .context p {
+  text-align: center;
+  margin-bottom: 60px;
+}
+#cont9 .view {
+  width: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+#cont9 .view .slide1 {
+  height: 150px;
+  width: 50%;
+}
+#cont9 .view .slide1 .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#cont9 .view .slide1 .img img {
+  height: 150px;
+}
+#cont9 .view .slide2 {
+  height: 150px;
+  width: 50%;
+}
+#cont9 .view .slide2 .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#cont9 .view .slide2 .img img {
+  height: 150px;
 }
 
 @media screen and (max-width: 1200px) {

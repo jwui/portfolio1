@@ -20,8 +20,12 @@
           <textarea name="context"><%- brdData.brdcontext %></textarea>
           <input type="hidden" name="auther" value="<%- brdData.brdauther %>" />
           <!-- 이미지 파일 수정 업로드-->
-          <input type="file" name="filetest">
-          <input type="hidden" name="fileOrigin" value="<%- brdData.fileName %>">
+          <input type="file" name="filetest" />
+          <input
+            type="hidden"
+            name="fileOrigin"
+            value="<%- brdData.fileName %>"
+          />
 
           <button type="submit">게시글 수정</button>
         </form>

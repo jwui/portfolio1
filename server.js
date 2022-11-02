@@ -12,8 +12,6 @@ const multer = require("multer");
 const app = express();
 const port = process.env.PORT || 8000;
 
-
-
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "public/upload");
@@ -25,18 +23,18 @@ const storage = multer.diskStorage({
         "utf8"
       ))
     );
-  }
+  },
 });
 
 const upload = multer({
   storage: storage,
-  fileFilter : function(req, file, cb){
-      let ext = path.extname(file.originalname);
-      if(ext !== '.png' && ext !== '.jpg' && ext !== '.jpeg') {
-          return cb(new Error('PNG, JPG만 업로드하세요'))
-      }
-      cb(null, true)
-  }
+  fileFilter: function (req, file, cb) {
+    let ext = path.extname(file.originalname);
+    if (ext !== ".png" && ext !== ".jpg" && ext !== ".jpeg") {
+      return cb(new Error("PNG, JPG, 또는 JPEG만 업로드하세요"));
+    }
+    cb(null, true);
+  },
 });
 
 //ejs 태그를 사용하기 위한 세팅
@@ -127,30 +125,51 @@ app.post("/joinresult", function (req, res) {
   //   }
   // );
 
-    db.collection("port1_join").findOne({$or:[{joinname:req.body.username},{joinemail:req.body.useremail}]},function (err, result) {
-        //db베이스에서 해당 회원아이디가 존재하는경우
-        console.log(result);
-        if(result) {
-          if(result.joinemail === req.body.useremail){res.send("<script>alert('이미 가입된 이메일입니다'); location.href='/join'; </script>");}
-          else if(result.joinname === req.body.username){res.send("<script>alert('중복된 이름입니다.'); location.href='/join'; </script>");}
+  db.collection("port1_join").findOne(
+    {
+      $or: [{ joinname: req.body.username }, { joinemail: req.body.useremail }],
+    },
+    function (err, result) {
+      //db베이스에서 해당 회원아이디가 존재하는경우
+      console.log(result);
+      if (result) {
+        if (result.joinemail === req.body.useremail) {
+          res.send(
+            "<script>alert('이미 가입된 이메일입니다'); location.href='/join'; </script>"
+          );
+        } else if (result.joinname === req.body.username) {
+          res.send(
+            "<script>alert('중복된 이름입니다.'); location.href='/join'; </script>"
+          );
         }
-        else{
-          db.collection("port1_count").findOne({ name: "회원정보" },function (err, result) {
-              db.collection("port1_join").insertOne(
-                {
-                  joinno: result.joinCount + 1,
-                  joinname: req.body.username,
-                  joinemail: req.body.useremail,
-                  joinpass: req.body.userpass,
-                },
-                function (err, result) {
-                  db.collection("port1_count").updateOne({ name: "회원정보" },{ $inc: { joinCount: 1 } },function (err, result) {
-                      res.send("<script>alert('회원가입이 완료되었습니다.'); location.href='/login'; </script>");
-                  });
-                });
-            });
-        }
-    });
+      } else {
+        db.collection("port1_count").findOne(
+          { name: "회원정보" },
+          function (err, result) {
+            db.collection("port1_join").insertOne(
+              {
+                joinno: result.joinCount + 1,
+                joinname: req.body.username,
+                joinemail: req.body.useremail,
+                joinpass: req.body.userpass,
+              },
+              function (err, result) {
+                db.collection("port1_count").updateOne(
+                  { name: "회원정보" },
+                  { $inc: { joinCount: 1 } },
+                  function (err, result) {
+                    res.send(
+                      "<script>alert('회원가입이 완료되었습니다.'); location.href='/login'; </script>"
+                    );
+                  }
+                );
+              }
+            );
+          }
+        );
+      }
+    }
+  );
 });
 
 //메인페이지 get 요청
@@ -177,11 +196,10 @@ app.get("/brdinsert", function (req, res) {
 //게시글 작성 후 데이터베이스에 넣는 작업 요청
 app.post("/add", upload.single("filetest"), function (req, res) {
   console.log(req.file);
-  if(req.file){
-     fileUpload = req.file.originalname
-  }
-  else{
-     fileUpload = null;
+  if (req.file) {
+    fileUpload = req.file.originalname;
+  } else {
+    fileUpload = null;
   }
 
   db.collection("port1_count").findOne(
@@ -293,13 +311,12 @@ app.get("/brdupt/:no", function (req, res) {
   //input, textarea에다가 작성내용 미리 보여줌
 });
 
-app.post("/update",upload.single("filetest"),function (req, res) {
+app.post("/update", upload.single("filetest"), function (req, res) {
   //db에 해당 게시글 번호에 맞는 게시글 수정처리
-  if(req.file){
-     fileUpload = req.file.originalname;
-  }
-  else{
-    fileUpload = req.body.fileOrigin
+  if (req.file) {
+    fileUpload = req.file.originalname;
+  } else {
+    fileUpload = req.body.fileOrigin;
   }
 
   db.collection("port1_board").updateOne(
@@ -309,7 +326,7 @@ app.post("/update",upload.single("filetest"),function (req, res) {
         brdtitle: req.body.title,
         brdcontext: req.body.context,
         brdauther: req.body.auther,
-        fileName:fileUpload
+        fileName: fileUpload,
       },
     },
     //해당 게시글 상세화면 페이지로 이동
