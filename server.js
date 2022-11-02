@@ -12,6 +12,8 @@ const multer = require("multer");
 const app = express();
 const port = process.env.PORT || 8000;
 
+
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "public/upload");
@@ -23,19 +25,19 @@ const storage = multer.diskStorage({
         "utf8"
       ))
     );
-  },
-  fileFilter: function (req, file, cb) {
-    const ext = path.extname(file.originalname);
-    if (ext !== ".jpeg" || ".png" || ".jpg") {
-      return cb(null, false);
-    }
-    else{
-      cb(null, true);
-    }
   }
 });
 
-const upload = multer({ storage: storage});
+const upload = multer({
+  storage: storage,
+  fileFilter : function(req, file, cb){
+      let ext = path.extname(file.originalname);
+      if(ext !== '.png' && ext !== '.jpg' && ext !== '.jpeg') {
+          return cb(new Error('PNG, JPG만 업로드하세요'))
+      }
+      cb(null, true)
+  }
+});
 
 //ejs 태그를 사용하기 위한 세팅
 app.set("view engine", "ejs");
@@ -75,55 +77,80 @@ app.get("/join", function (req, res) {
 
 //회원가입 페이지에서 보내준 데이터를 db에 저장요청
 app.post("/joinresult", function (req, res) {
-  db.collection("port1_join").findOne(
-    { joinname: req.body.username },
-    function (err, result) {
-      //db베이스에서 해당 회원닉네임이 존재하는경우
-      if (result) {
-        res.send(
-          "<script>alert('이미 존재하는 닉네임입니다'); location.href='/join'; </script>"
-        );
-      } else {
-        db.collection("port1_join").findOne(
-          { joinemail: req.body.useremail },
-          function (err, result) {
-            //db베이스에서 해당 회원아이디가 존재하는경우
-            if (result) {
-              res.send(
-                "<script>alert('이미 가입된 이메일입니다'); location.href='/join'; </script>"
-              );
-            } else {
-              db.collection("port1_count").findOne(
-                { name: "회원정보" },
+  // db.collection("port1_join").findOne(
+  //   { joinname: req.body.username },
+  //   function (err, result) {
+  //     //db베이스에서 해당 회원닉네임이 존재하는경우
+  //     if (result) {
+  //       res.send(
+  //         "<script>alert('이미 존재하는 닉네임입니다'); location.href='/join'; </script>"
+  //       );
+  //     } else {
+  //       db.collection("port1_join").findOne(
+  //         { joinemail: req.body.useremail},
+  //         function (err, result) {
+  //           //db베이스에서 해당 회원아이디가 존재하는경우
+  //           if (result) {
+  //             res.send(
+  //               "<script>alert('이미 가입된 이메일입니다'); location.href='/join'; </script>"
+  //             );
+  //           } else {
+  //             db.collection("port1_count").findOne(
+  //               { name: "회원정보" },
+  //               function (err, result) {
+  //                 db.collection("port1_join").insertOne(
+  //                   {
+  //                     joinno: result.joinCount + 1,
+  //                     joinname: req.body.username,
+  //                     joinemail: req.body.useremail,
+  //                     joinpass: req.body.userpass,
+  //                     //프로퍼티명 작명하고 값은 이메일,전화번호 값 추가
+  //                   },
+  //                   function (err, result) {
+  //                     db.collection("port1_count").updateOne(
+  //                       { name: "회원정보" },
+  //                       { $inc: { joinCount: 1 } },
+  //                       function (err, result) {
+  //                         res.send(
+  //                           "<script>alert('회원가입이 완료되었습니다.'); location.href='/login'; </script>"
+  //                         );
+  //                       }
+  //                     );
+  //                   }
+  //                 );
+  //               }
+  //             );
+  //           }
+  //         }
+  //       );
+  //     }
+  //   }
+  // );
+
+    db.collection("port1_join").findOne({$or:[{joinname:req.body.username},{joinemail:req.body.useremail}]},function (err, result) {
+        //db베이스에서 해당 회원아이디가 존재하는경우
+        console.log(result);
+        if(result) {
+          if(result.joinemail === req.body.useremail){res.send("<script>alert('이미 가입된 이메일입니다'); location.href='/join'; </script>");}
+          else if(result.joinname === req.body.username){res.send("<script>alert('중복된 이름입니다.'); location.href='/join'; </script>");}
+        }
+        else{
+          db.collection("port1_count").findOne({ name: "회원정보" },function (err, result) {
+              db.collection("port1_join").insertOne(
+                {
+                  joinno: result.joinCount + 1,
+                  joinname: req.body.username,
+                  joinemail: req.body.useremail,
+                  joinpass: req.body.userpass,
+                },
                 function (err, result) {
-                  db.collection("port1_join").insertOne(
-                    {
-                      joinno: result.joinCount + 1,
-                      joinname: req.body.username,
-                      joinemail: req.body.useremail,
-                      joinpass: req.body.userpass,
-                      //프로퍼티명 작명하고 값은 이메일,전화번호 값 추가
-                    },
-                    function (err, result) {
-                      db.collection("port1_count").updateOne(
-                        { name: "회원정보" },
-                        { $inc: { joinCount: 1 } },
-                        function (err, result) {
-                          res.send(
-                            "<script>alert('회원가입이 완료되었습니다.'); location.href='/login'; </script>"
-                          );
-                        }
-                      );
-                    }
-                  );
-                }
-              );
-            }
-          }
-        );
-      }
-    }
-  );
+                  db.collection("port1_count").updateOne({ name: "회원정보" },{ $inc: { joinCount: 1 } },function (err, result) {
+                      res.send("<script>alert('회원가입이 완료되었습니다.'); location.href='/login'; </script>");
+                  });
+                });
+            });
+        }
+    });
 });
 
 //메인페이지 get 요청
@@ -149,7 +176,7 @@ app.get("/brdinsert", function (req, res) {
 
 //게시글 작성 후 데이터베이스에 넣는 작업 요청
 app.post("/add", upload.single("filetest"), function (req, res) {
-
+  console.log(req.file);
   if(req.file){
      fileUpload = req.file.originalname
   }
