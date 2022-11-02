@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const MongoClient = require("mongodb").MongoClient;
 
 const passport = require("passport");
@@ -23,9 +24,18 @@ const storage = multer.diskStorage({
       ))
     );
   },
+  fileFilter: function (req, file, cb) {
+    const ext = path.extname(file.originalname);
+    if (ext !== ".jpeg" || ".png" || ".jpg") {
+      return cb(null, false);
+    }
+    else{
+      cb(null, true);
+    }
+  }
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({ storage: storage});
 
 //ejs 태그를 사용하기 위한 세팅
 app.set("view engine", "ejs");
@@ -139,6 +149,14 @@ app.get("/brdinsert", function (req, res) {
 
 //게시글 작성 후 데이터베이스에 넣는 작업 요청
 app.post("/add", upload.single("filetest"), function (req, res) {
+
+  if(req.file){
+     fileUpload = req.file.originalname
+  }
+  else{
+     fileUpload = null;
+  }
+
   db.collection("port1_count").findOne(
     { name: "게시판" },
     function (err, result1) {
@@ -149,7 +167,7 @@ app.post("/add", upload.single("filetest"), function (req, res) {
           brdcontext: req.body.context,
           brdauther: req.user.joinname,
           brdprice: req.body.price,
-          fileName: req.file.originalname,
+          fileName: fileUpload,
         },
         function (err, result2) {
           db.collection("port1_count").updateOne(
@@ -248,8 +266,15 @@ app.get("/brdupt/:no", function (req, res) {
   //input, textarea에다가 작성내용 미리 보여줌
 });
 
-app.post("/update", function (req, res) {
+app.post("/update",upload.single("filetest"),function (req, res) {
   //db에 해당 게시글 번호에 맞는 게시글 수정처리
+  if(req.file){
+     fileUpload = req.file.originalname;
+  }
+  else{
+    fileUpload = req.body.fileOrigin
+  }
+
   db.collection("port1_board").updateOne(
     { brdid: Number(req.body.id) },
     {
@@ -257,6 +282,7 @@ app.post("/update", function (req, res) {
         brdtitle: req.body.title,
         brdcontext: req.body.context,
         brdauther: req.body.auther,
+        fileName:fileUpload
       },
     },
     //해당 게시글 상세화면 페이지로 이동

@@ -26,7 +26,9 @@
     <div id="detail_container">
       <div class="brd_center">
         <div class="imgcont">
+          <% if(brdData.fileName) { %>
           <img src="/upload/<%- brdData.fileName %>" />
+          <% } %>
           <!-- <a href="/upload/<%- brdData.fileName %>" download>파일 다운로드</a> -->
           <div class="price"><%- brdData.brdprice %></div>
         </div>
