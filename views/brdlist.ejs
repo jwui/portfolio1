@@ -41,7 +41,8 @@
           </div>
           <div class="context">
             <a href="/brddetail/<%- brdData[i].brdid %>"
-              ><%- brdData[i].brdtitle %></a
+              ><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;<%-
+              brdData[i].brdtitle %></a
             >
             <div class="info">
               <p><%- brdData[i].brdprice %></p>
@@ -51,7 +52,10 @@
                 >
               </div>
             </div>
-            <p><%- brdData[i].brdauther %></p>
+            <p>
+              <i class="fa-solid fa-circle-user"></i>&nbsp;&nbsp;<%-
+              brdData[i].brdauther %>
+            </p>
           </div>
         </div>
 
