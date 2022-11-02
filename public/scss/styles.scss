@@ -524,12 +524,15 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
     text-indent: -9999px;
     margin: 0 10px;
+    transition: all 0.5s;
   }
   .pager li.on {
     background-color: #fff;
+    width: 40px;
+    border-radius: 10px;
   }
 
   .left {
