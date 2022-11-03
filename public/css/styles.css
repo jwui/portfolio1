@@ -1010,7 +1010,7 @@ button {
   scale: 1.1;
 }
 #index_container .cont2 {
-  background-color: rgba(244, 244, 244, 0.9764705882);
+  background-color: #fff;
   padding: 100px 0;
 }
 #index_container .cont2 .center {
@@ -1053,7 +1053,7 @@ button {
   padding: 24px;
   margin-bottom: 16px;
   box-sizing: border-box;
-  border: 1px solid #666;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
 }
 #index_container .cont2 .center .inner .right .card i {
   display: flex;
@@ -1075,7 +1075,7 @@ button {
 }
 
 #cont4 {
-  background-color: rgba(244, 244, 244, 0.9764705882);
+  background-color: #fff;
   padding: 100px 0;
 }
 #cont4 .center {
@@ -1491,7 +1491,7 @@ button {
     height: 80px;
   }
   #index_container .cont2 {
-    background-color: rgba(244, 244, 244, 0.9764705882);
+    background-color: #fff;
     padding: 100px 0;
   }
   #index_container .cont2 .center {
@@ -1532,7 +1532,7 @@ button {
     padding: 24px;
     margin-bottom: 16px;
     box-sizing: border-box;
-    border: 1px solid #666;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
   }
   #index_container .cont2 .center .inner .right .card i {
     display: flex;
