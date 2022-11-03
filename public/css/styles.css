@@ -111,7 +111,7 @@ button {
 }
 #login_container .left #login_form .btns #loginBtn {
   border: none;
-  background-color: #00203f;
+  background-color: #f9c844;
   line-height: 50px;
   padding: 0px 50px;
   border-radius: 25px;
@@ -121,7 +121,7 @@ button {
 #login_container .left #login_form .btns a {
   border: none;
   line-height: 50px;
-  background-color: #adefd1;
+  background-color: #7375ff;
   padding: 0 50px;
   border-radius: 25px;
   color: #fff;
@@ -205,19 +205,11 @@ button {
 }
 #join_container .left #join_form .btns #joinBtn {
   border: none;
-  background-color: #00203f;
+  background-color: #f9c844;
   line-height: 50px;
   padding: 0px 50px;
   border-radius: 25px;
-  color: #fff;
   font-size: 16px;
-}
-#join_container .left #join_form .btns a {
-  border: none;
-  line-height: 50px;
-  background-color: #adefd1;
-  padding: 0 50px;
-  border-radius: 25px;
   color: #fff;
 }
 #join_container .right {
