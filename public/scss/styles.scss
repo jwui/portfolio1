@@ -1376,6 +1376,10 @@ button {
             a {
               color: #666;
               margin-right: 20px;
+              transition: all 0.3s;
+            }
+            a:hover {
+              color: #7375ff;
             }
           }
         }

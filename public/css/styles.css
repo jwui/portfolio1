@@ -1360,6 +1360,10 @@ button {
 #cont8 .center .card .midbar .context .icons a {
   color: #666;
   margin-right: 20px;
+  transition: all 0.3s;
+}
+#cont8 .center .card .midbar .context .icons a:hover {
+  color: #7375ff;
 }
 #cont8 .center .card > div.context {
   box-sizing: border-box;
