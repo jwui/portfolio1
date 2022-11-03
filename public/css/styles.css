@@ -1214,10 +1214,14 @@ body {
 }
 #cont6 .cards .card .contents .icons a {
   color: gray;
+  transition: all 0.3s;
 }
 #cont6 .cards .card .contents .icons a i {
   font-size: 18px;
   margin: 0 8px;
+}
+#cont6 .cards .card .contents .icons a:hover {
+  color: rgb(39, 74, 187);
 }
 
 #cont7 {
@@ -1460,36 +1464,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f4;
 }
 #cont9 .view .slide1 {
-  height: 150px;
-  width: 50%;
+  height: 120px;
+  width: 100%;
 }
 #cont9 .view .slide1 .img {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 #cont9 .view .slide1 .img img {
-  height: 150px;
-}
-#cont9 .view .slide2 {
-  height: 150px;
-  width: 50%;
-}
-#cont9 .view .slide2 .img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-evenly;
-}
-#cont9 .view .slide2 .img img {
-  height: 150px;
+  height: 120px;
 }
 
 @media screen and (max-width: 1200px) {
+  #cont9 .view .slide1 .img img {
+    height: 80px;
+  }
   #index_container .cont2 {
     background-color: #f9f9f9;
     padding: 100px 0;
@@ -1641,6 +1634,9 @@ body {
   }
 }
 @media screen and (max-width: 1000px) {
+  #cont9 .view .slide1 .img img {
+    height: 60px;
+  }
   #cont8 .center {
     width: 95%;
   }
@@ -1825,11 +1821,24 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
+  #cont9 .view .slide1 .img img {
+    height: 60px;
+  }
+  #cont9 .view .slide1 .img img:nth-of-type(5) {
+    display: none;
+  }
+  #cont9 .view .slide1 .img img:nth-of-type(10) {
+    display: none;
+  }
+  #cont9 .view .slide2 .img img {
+    height: 60px;
+  }
   #cont8 .center {
     width: 90%;
     flex-wrap: wrap;
   }
   #cont8 .center .card {
+    max-width: 400px;
     width: 100%;
     margin-bottom: 60px;
   }
@@ -1848,6 +1857,7 @@ body {
     flex-wrap: wrap;
   }
   #cont7 .center .card {
+    max-width: 400px;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 60px;

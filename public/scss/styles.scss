@@ -1227,9 +1227,13 @@ body {
         .icons {
           a {
             color: gray;
+            transition: all 0.3s;
             i {
               font-size: 18px;
               margin: 0 8px;
+            }
+            &:hover {
+              color: rgb(39, 74, 187);
             }
           }
         }
@@ -1486,32 +1490,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
     .slide1 {
-      height: 150px;
-      width: 50%;
-
+      height: 120px;
+      width: 100%;
       .img {
         display: flex;
         justify-content: center;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         img {
-          height: 150px;
-        }
-      }
-    }
-    .slide2 {
-      height: 150px;
-      width: 50%;
-
-      .img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        justify-content: space-evenly;
-        img {
-          height: 150px;
+          height: 120px;
         }
       }
     }
@@ -1520,6 +1508,18 @@ body {
 
 //서브페이지 반응형 작업
 @media screen and (max-width: 1200px) {
+  #cont9 {
+    .view {
+      .slide1 {
+        .img {
+          img {
+            height: 80px;
+          }
+        }
+      }
+    }
+  }
+
   #index_container {
     .cont2 {
       background-color: #f9f9f9;
@@ -1707,6 +1707,17 @@ body {
   }
 }
 @media screen and (max-width: 1000px) {
+  #cont9 {
+    .view {
+      .slide1 {
+        .img {
+          img {
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
   #cont8 {
     .center {
       width: 95%;
@@ -1923,11 +1934,36 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  #cont9 {
+    .view {
+      .slide1 {
+        .img {
+          img {
+            height: 60px;
+          }
+          img:nth-of-type(5) {
+            display: none;
+          }
+          img:nth-of-type(10) {
+            display: none;
+          }
+        }
+      }
+      .slide2 {
+        .img {
+          img {
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
   #cont8 {
     .center {
       width: 90%;
       flex-wrap: wrap;
       .card {
+        max-width: 400px;
         width: 100%;
         margin-bottom: 60px;
         .midbar {
@@ -1950,6 +1986,7 @@ body {
 
       flex-wrap: wrap;
       .card {
+        max-width: 400px;
         width: 80%;
         margin: 0 auto;
         margin-bottom: 60px;
