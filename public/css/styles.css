@@ -291,7 +291,7 @@ button {
   line-height: 100px;
 }
 .h-bot .logo a {
-  color: gray;
+  color: #000;
 }
 .h-bot .logo img {
   height: 100px;
@@ -1616,7 +1616,7 @@ button {
     top: -4px;
   }
   .h-bot .logo a {
-    color: gray;
+    color: #000;
     font-size: 24px;
   }
   .h-bot .logo img {
