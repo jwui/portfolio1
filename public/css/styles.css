@@ -46,6 +46,10 @@ body {
   color: #666;
 }
 
+button {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 .clear_fix::after {
   content: "";
   display: block;
@@ -580,6 +584,7 @@ body {
 }
 .cont4 .center .context h2 {
   margin-bottom: 20px;
+  color: #000;
 }
 .cont4 .center .context p {
   margin-bottom: 20px;
@@ -1466,7 +1471,7 @@ body {
   align-items: center;
 }
 #cont9 .view .slide1 {
-  height: 120px;
+  height: 100px;
   width: 100%;
 }
 #cont9 .view .slide1 .img {
@@ -1476,7 +1481,7 @@ body {
   justify-content: space-between;
 }
 #cont9 .view .slide1 .img img {
-  height: 120px;
+  height: 100px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1898,10 +1903,10 @@ body {
     margin-bottom: 10px;
   }
   #subpage_container .cont1 .center {
-    width: 600px;
+    width: 90%;
   }
   #subpage_container .cont2 .center {
-    width: 600px;
+    width: 90%;
   }
   #subpage_container .cont2 .center .cards {
     width: 100%;
@@ -1914,9 +1919,10 @@ body {
     width: 180px;
   }
   #subpage_container .cont4 .center {
-    width: 600px;
+    width: 90%;
   }
   #subpage_container .cont4 .center .cards .card {
+    max-width: 400px;
     width: 100%;
     margin: 10px;
     margin-bottom: 50px;

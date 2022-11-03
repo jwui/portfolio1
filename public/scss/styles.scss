@@ -36,6 +36,9 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   color: #666;
 }
+button {
+  font-family: "Noto Sans KR", sans-serif;
+}
 .clear_fix::after {
   content: "";
   display: block;
@@ -568,6 +571,7 @@ body {
       text-align: center;
       h2 {
         margin-bottom: 20px;
+        color: #000;
       }
       p {
         margin-bottom: 20px;
@@ -1094,6 +1098,7 @@ body {
         margin-bottom: 46px;
       }
     }
+
     .places {
       display: flex;
       flex-wrap: wrap;
@@ -1491,7 +1496,7 @@ body {
     justify-content: center;
     align-items: center;
     .slide1 {
-      height: 120px;
+      height: 100px;
       width: 100%;
       .img {
         display: flex;
@@ -1499,7 +1504,7 @@ body {
         align-items: center;
         justify-content: space-between;
         img {
-          height: 120px;
+          height: 100px;
         }
       }
     }
@@ -2037,12 +2042,12 @@ body {
   #subpage_container {
     .cont1 {
       .center {
-        width: 600px;
+        width: 90%;
       }
     }
     .cont2 {
       .center {
-        width: 600px;
+        width: 90%;
         .cards {
           width: 100%;
           .card {
@@ -2057,9 +2062,10 @@ body {
     }
     .cont4 {
       .center {
-        width: 600px;
+        width: 90%;
         .cards {
           .card {
+            max-width: 400px;
             width: 100%;
             margin: 10px;
             margin-bottom: 50px;
