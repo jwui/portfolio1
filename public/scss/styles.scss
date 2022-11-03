@@ -22,7 +22,7 @@ input,
 select,
 textarea {
   outline: 0;
-  border: 1px solid #000;
+  border: 1px solid #292826;
   box-sizing: border-box;
 }
 textarea {
@@ -133,7 +133,7 @@ button {
 
     .content {
       color: #fff;
-      border: 10px solid #555;
+      border: 10px solid #666;
       padding: 80px 20px;
       z-index: 2;
       font-weight: bold;
@@ -160,13 +160,13 @@ button {
       margin-bottom: 40px;
     }
     p {
-      color: #555;
+      color: #666;
       display: flex;
       justify-content: center;
       margin-top: 22px;
       margin-bottom: 60px;
       a {
-        color: #555;
+        color: #666;
         font-weight: bold;
       }
     }
@@ -227,7 +227,7 @@ button {
     }
     .content {
       color: #fff;
-      border: 10px solid #555;
+      border: 10px solid #666;
       padding: 80px 20px;
       z-index: 2;
       font-weight: bold;
@@ -250,7 +250,7 @@ button {
   }
 }
 .h-top {
-  background: #202040;
+  background: #f9c844;
   .condition {
     max-width: 1100px;
     width: 90%;
@@ -260,11 +260,11 @@ button {
     display: flex;
     justify-content: flex-end;
     > div {
-      color: #fff;
+      color: #292826;
     }
     .logout {
       margin-left: 20px;
-      color: #fff;
+      color: #292826;
     }
     a {
       color: #fff;
@@ -279,7 +279,7 @@ button {
 .h-bot .logo {
   line-height: 100px;
   a {
-    color: #000;
+    color: #292826;
   }
   img {
     height: 100px;
@@ -315,14 +315,14 @@ button {
 .h-bot .center .gnbWrap .gnb > li > a {
   display: block;
   height: 100%;
-  color: gray;
+  color: #292826;
 }
 .h-bot .center .gnbWrap .gnb > li:hover > a:first-child::after {
   display: block;
   content: "";
   width: 100%;
   height: 2px;
-  background-color: gray;
+  background-color: #292826;
 }
 .h-bot .center .gnbWrap .gnb > li > a:first-child::after {
   display: block;
@@ -343,7 +343,7 @@ button {
   line-height: 40px;
 }
 .depth2 li a {
-  color: gray;
+  color: #292826;
 }
 
 /*gnbBg 디자인*/
@@ -410,7 +410,7 @@ button {
         line-height: 1.5;
         h2 {
           margin-bottom: 20px;
-          color: #000;
+          color: #292826;
         }
         p {
           line-height: 2;
@@ -419,7 +419,7 @@ button {
     }
   }
   .cont2 {
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
     .center {
       width: 1100px;
       margin: 100px auto;
@@ -427,13 +427,13 @@ button {
       .context {
         text-align: center;
         h2 {
-          color: #000;
+          color: #292826;
           margin-bottom: 20px;
         }
         i {
           font-size: 40px;
           margin-bottom: 20px;
-          color: rgb(39, 74, 187);
+          color: #7375ff;
         }
         p {
           margin-bottom: 20px;
@@ -466,7 +466,7 @@ button {
         margin: 0 auto;
         border: none;
         padding: 15px 25px;
-        background-color: #4682b4;
+        background-color: #7375ff;
         border-radius: 25px;
         margin-top: 40px;
         color: #fff;
@@ -573,7 +573,7 @@ button {
       text-align: center;
       h2 {
         margin-bottom: 20px;
-        color: #000;
+        color: #292826;
       }
       p {
         margin-bottom: 20px;
@@ -596,13 +596,13 @@ button {
         .content {
           padding: 20px;
           line-height: 1.5;
-          color: #888;
+          color: #666;
           h3 {
             font-size: 14px;
           }
           h2 {
             font-size: 16px;
-            color: #333;
+            color: #666;
           }
           p {
             font-size: 14px;
@@ -695,7 +695,7 @@ button {
             width: 100%;
             height: 50px;
             position: absolute;
-            background-color: #333;
+            background-color: #666;
             bottom: 136px;
             left: 0px;
             z-index: 1;
@@ -703,15 +703,15 @@ button {
               position: relative;
               line-height: 50px;
               left: 120px;
-              color: #999;
+              color: #666;
             }
           }
         }
         p {
-          color: #555;
+          color: #666;
         }
         a {
-          color: #333;
+          color: #666;
           font-weight: bold;
         }
       }
@@ -724,7 +724,7 @@ button {
     display: flex;
     justify-content: flex-end;
     > a {
-      background-color: #4682b4;
+      background-color: #7375ff;
       padding: 15px 15px;
       border-radius: 5px;
       font-size: 16px;
@@ -769,7 +769,7 @@ button {
     }
     .title {
       font-size: 36px;
-      color: #333;
+      color: #666;
       margin: 34px 0;
     }
     > div {
@@ -786,7 +786,7 @@ button {
     margin: 0 auto;
     margin-bottom: 100px;
     a {
-      background-color: #4682b4;
+      background-color: #7375ff;
       padding: 15px 15px;
       border-radius: 5px;
       font-size: 16px;
@@ -818,7 +818,7 @@ button {
         color: #fff;
         font-weight: bold;
         border: none;
-        background-color: #4682b4;
+        background-color: #7375ff;
         padding: 15px 15px;
         border-radius: 5px;
         font-size: 16px;
@@ -853,7 +853,7 @@ button {
 }
 
 #footer {
-  background-color: #202040;
+  background-color: #f9c844;
   .f-top {
     max-width: 1100px;
     width: 90%;
@@ -862,14 +862,14 @@ button {
     padding: 80px 0;
     h2 {
       margin-bottom: 20px;
-      color: #fff;
+      color: #292826;
     }
     p {
       line-height: 2;
-      color: #c5cbcf;
+      color: #292826;
     }
     a {
-      color: #c5cbcf;
+      color: #292826;
       display: block;
       line-height: 2;
     }
@@ -878,9 +878,9 @@ button {
     }
     i {
       font-size: 20px;
-      color: #c5cbcf;
+      color: #292826;
       margin: 0 5px;
-      background-color: #1a1a38;
+      background-color: #f9c844;
       border-radius: 10px;
       padding: 5px;
     }
@@ -903,9 +903,9 @@ button {
   .f-bot {
     line-height: 100px;
     text-align: center;
-    background-color: #1a1a38;
+    background-color: #f9c844;
     p {
-      color: #c5cbcf;
+      color: #292826;
     }
   }
 }
@@ -933,7 +933,7 @@ button {
         font-weight: bold;
         font-size: 16px;
         border: none;
-        background-color: #4682b4;
+        background-color: #7375ff;
         padding: 15px 15px;
         border-radius: 5px;
       }
@@ -943,7 +943,7 @@ button {
         font-weight: bold;
         font-size: 16px;
         border: none;
-        background-color: #4682b4;
+        background-color: #7375ff;
         padding: 15px 15px;
         border-radius: 5px;
         margin-left: 20px;
@@ -1019,7 +1019,7 @@ button {
     }
   }
   .cont2 {
-    background-color: #f9f9f9;
+    background-color: #f4f4f4f9;
     padding: 100px 0;
     .center {
       width: 1100px;
@@ -1028,7 +1028,7 @@ button {
         text-align: center;
         h2 {
           margin-bottom: 26px;
-          color: #000;
+          color: #292826;
         }
         p {
           margin: 0 auto;
@@ -1058,16 +1058,16 @@ button {
             padding: 24px;
             margin-bottom: 16px;
             box-sizing: border-box;
-            border: 1px solid #eee;
+            border: 1px solid #666;
             i {
               display: flex;
               font-size: 64px;
               margin-right: 24px;
               align-items: center;
-              color: #274abb;
+              color: #7375ff;
             }
             h2 {
-              color: #000;
+              color: #292826;
               margin-bottom: 12px;
               font-weight: 400;
             }
@@ -1085,7 +1085,7 @@ button {
 }
 
 #cont4 {
-  background-color: #f9f9f9;
+  background-color: #f4f4f4f9;
   padding: 100px 0;
   .center {
     width: 1100px;
@@ -1094,7 +1094,7 @@ button {
       text-align: center;
       h2 {
         margin-bottom: 26px;
-        color: #000;
+        color: #292826;
       }
       p {
         margin-bottom: 46px;
@@ -1177,7 +1177,7 @@ button {
         height: 80px;
         margin-right: 20px;
         background-color: #fff;
-        color: #274abb;
+        color: #7375ff;
         text-align: center;
         padding-top: 15px;
         box-sizing: border-box;
@@ -1201,7 +1201,7 @@ button {
     text-align: center;
     margin-top: 100px;
     h2 {
-      color: #000;
+      color: #292826;
       margin-bottom: 30px;
     }
     p {
@@ -1226,21 +1226,21 @@ button {
         text-align: center;
         h3 {
           margin-bottom: 12px;
-          color: #000;
+          color: #292826;
         }
         p {
           margin-bottom: 12px;
         }
         .icons {
           a {
-            color: gray;
+            color: #666;
             transition: all 0.3s;
             i {
               font-size: 18px;
               margin: 0 8px;
             }
             &:hover {
-              color: rgb(39, 74, 187);
+              color: #7375ff;
             }
           }
         }
@@ -1326,7 +1326,7 @@ button {
     text-align: center;
     margin-top: 100px;
     h2 {
-      color: #000;
+      color: #292826;
       margin-bottom: 30px;
     }
     p {
@@ -1372,9 +1372,9 @@ button {
             margin-right: 20px;
           }
           .icons {
-            color: #555;
+            color: #666;
             a {
-              color: #555;
+              color: #666;
               margin-right: 20px;
             }
           }
@@ -1385,7 +1385,7 @@ button {
         padding: 30px;
         h2 {
           margin-bottom: 20px;
-          color: #000;
+          color: #292826;
         }
         > p {
           line-height: 1.5;
@@ -1431,7 +1431,7 @@ button {
         font-weight: bold;
         font-size: 16px;
         border: none;
-        background-color: #4682b4;
+        background-color: #7375ff;
         padding: 15px 15px;
         border-radius: 5px;
         width: 40%;
@@ -1443,7 +1443,7 @@ button {
         font-weight: bold;
         font-size: 16px;
         border: none;
-        background-color: #4682b4;
+        background-color: #7375ff;
         padding: 15px 15px;
         border-radius: 5px;
         text-align: center;
@@ -1485,7 +1485,7 @@ button {
       text-align: center;
       margin-top: 100px;
       margin-bottom: 40px;
-      color: #000;
+      color: #292826;
     }
     p {
       text-align: center;
@@ -1504,7 +1504,7 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         img {
           height: 100px;
         }
@@ -1529,7 +1529,7 @@ button {
 
   #index_container {
     .cont2 {
-      background-color: #f9f9f9;
+      background-color: #f4f4f4f9;
       padding: 100px 0;
       .center {
         width: 100%;
@@ -1538,7 +1538,7 @@ button {
           text-align: center;
           h2 {
             margin-bottom: 26px;
-            color: #000;
+            color: #292826;
           }
           p {
             margin-bottom: 46px;
@@ -1566,16 +1566,16 @@ button {
               padding: 24px;
               margin-bottom: 16px;
               box-sizing: border-box;
-              border: 1px solid #eee;
+              border: 1px solid #666;
               i {
                 display: flex;
                 font-size: 64px;
                 margin-right: 24px;
                 align-items: center;
-                color: #274abb;
+                color: #7375ff;
               }
               h2 {
-                color: #000;
+                color: #292826;
                 margin-bottom: 12px;
                 font-weight: 400;
               }
@@ -1596,7 +1596,7 @@ button {
       text-align: center;
       margin-top: 100px;
       h2 {
-        color: #000;
+        color: #292826;
         margin-bottom: 30px;
       }
       p {
@@ -1666,7 +1666,7 @@ button {
     }
   }
   .h-top {
-    background: #202040;
+    background: #f9c844;
   }
   .h-bot {
     width: 100%;
@@ -1675,7 +1675,7 @@ button {
       position: relative;
       top: -4px;
       a {
-        color: #000;
+        color: #292826;
         font-size: 24px;
       }
       img {
@@ -1806,7 +1806,7 @@ button {
   .h-bot .logo {
     line-height: 100px;
     a {
-      color: gray;
+      color: #292826;
     }
     img {
       display: none;
@@ -1875,7 +1875,7 @@ button {
           }
         }
         li a:hover {
-          color: #274abb;
+          color: #7375ff;
           animation: ease-in;
           transition: all 0.3s;
           font-weight: 400;

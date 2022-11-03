@@ -28,7 +28,7 @@ input,
 select,
 textarea {
   outline: 0;
-  border: 1px solid #000;
+  border: 1px solid #292826;
   box-sizing: border-box;
 }
 
@@ -144,7 +144,7 @@ button {
 }
 #login_container .right .content {
   color: #fff;
-  border: 10px solid #555;
+  border: 10px solid #666;
   padding: 80px 20px;
   z-index: 2;
   font-weight: bold;
@@ -171,14 +171,14 @@ button {
   margin-bottom: 40px;
 }
 #join_container .left p {
-  color: #555;
+  color: #666;
   display: flex;
   justify-content: center;
   margin-top: 22px;
   margin-bottom: 60px;
 }
 #join_container .left p a {
-  color: #555;
+  color: #666;
   font-weight: bold;
 }
 #join_container .left #join_form {
@@ -238,7 +238,7 @@ button {
 }
 #join_container .right .content {
   color: #fff;
-  border: 10px solid #555;
+  border: 10px solid #666;
   padding: 80px 20px;
   z-index: 2;
   font-weight: bold;
@@ -260,7 +260,7 @@ button {
 }
 
 .h-top {
-  background: #202040;
+  background: #f9c844;
 }
 .h-top .condition {
   max-width: 1100px;
@@ -272,11 +272,11 @@ button {
   justify-content: flex-end;
 }
 .h-top .condition > div {
-  color: #fff;
+  color: #292826;
 }
 .h-top .condition .logout {
   margin-left: 20px;
-  color: #fff;
+  color: #292826;
 }
 .h-top .condition a {
   color: #fff;
@@ -291,7 +291,7 @@ button {
   line-height: 100px;
 }
 .h-bot .logo a {
-  color: #000;
+  color: #292826;
 }
 .h-bot .logo img {
   height: 100px;
@@ -330,7 +330,7 @@ button {
 .h-bot .center .gnbWrap .gnb > li > a {
   display: block;
   height: 100%;
-  color: gray;
+  color: #292826;
 }
 
 .h-bot .center .gnbWrap .gnb > li:hover > a:first-child::after {
@@ -338,7 +338,7 @@ button {
   content: "";
   width: 100%;
   height: 2px;
-  background-color: gray;
+  background-color: #292826;
 }
 
 .h-bot .center .gnbWrap .gnb > li > a:first-child::after {
@@ -362,7 +362,7 @@ button {
 }
 
 .depth2 li a {
-  color: gray;
+  color: #292826;
 }
 
 /*gnbBg 디자인*/
@@ -429,13 +429,13 @@ button {
 }
 #subpage_container .cont1 .center .context h2 {
   margin-bottom: 20px;
-  color: #000;
+  color: #292826;
 }
 #subpage_container .cont1 .center .context p {
   line-height: 2;
 }
 #subpage_container .cont2 {
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 #subpage_container .cont2 .center {
   width: 1100px;
@@ -446,13 +446,13 @@ button {
   text-align: center;
 }
 #subpage_container .cont2 .center .context h2 {
-  color: #000;
+  color: #292826;
   margin-bottom: 20px;
 }
 #subpage_container .cont2 .center .context i {
   font-size: 40px;
   margin-bottom: 20px;
-  color: rgb(39, 74, 187);
+  color: #7375ff;
 }
 #subpage_container .cont2 .center .context p {
   margin-bottom: 20px;
@@ -482,7 +482,7 @@ button {
   margin: 0 auto;
   border: none;
   padding: 15px 25px;
-  background-color: #4682b4;
+  background-color: #7375ff;
   border-radius: 25px;
   margin-top: 40px;
   color: #fff;
@@ -586,7 +586,7 @@ button {
 }
 .cont4 .center .context h2 {
   margin-bottom: 20px;
-  color: #000;
+  color: #292826;
 }
 .cont4 .center .context p {
   margin-bottom: 20px;
@@ -608,14 +608,14 @@ button {
 .cont4 .center .cards .card .content {
   padding: 20px;
   line-height: 1.5;
-  color: #888;
+  color: #666;
 }
 .cont4 .center .cards .card .content h3 {
   font-size: 14px;
 }
 .cont4 .center .cards .card .content h2 {
   font-size: 16px;
-  color: #333;
+  color: #666;
 }
 .cont4 .center .cards .card .content p {
   font-size: 14px;
@@ -703,7 +703,7 @@ button {
   width: 100%;
   height: 50px;
   position: absolute;
-  background-color: #333;
+  background-color: #666;
   bottom: 136px;
   left: 0px;
   z-index: 1;
@@ -712,13 +712,13 @@ button {
   position: relative;
   line-height: 50px;
   left: 120px;
-  color: #999;
+  color: #666;
 }
 #list_container .brd_center .card .context p {
-  color: #555;
+  color: #666;
 }
 #list_container .brd_center .card .context a {
-  color: #333;
+  color: #666;
   font-weight: bold;
 }
 #list_container .btn {
@@ -729,7 +729,7 @@ button {
   justify-content: flex-end;
 }
 #list_container .btn > a {
-  background-color: #4682b4;
+  background-color: #7375ff;
   padding: 15px 15px;
   border-radius: 5px;
   font-size: 16px;
@@ -772,7 +772,7 @@ button {
 }
 #detail_container .brd_center .title {
   font-size: 36px;
-  color: #333;
+  color: #666;
   margin: 34px 0;
 }
 #detail_container .brd_center > div {
@@ -789,7 +789,7 @@ button {
   margin-bottom: 100px;
 }
 #detail_container .buttons a {
-  background-color: #4682b4;
+  background-color: #7375ff;
   padding: 15px 15px;
   border-radius: 5px;
   font-size: 16px;
@@ -818,7 +818,7 @@ button {
   color: #fff;
   font-weight: bold;
   border: none;
-  background-color: #4682b4;
+  background-color: #7375ff;
   padding: 15px 15px;
   border-radius: 5px;
   font-size: 16px;
@@ -849,7 +849,7 @@ button {
 }
 
 #footer {
-  background-color: #202040;
+  background-color: #f9c844;
 }
 #footer .f-top {
   max-width: 1100px;
@@ -860,14 +860,14 @@ button {
 }
 #footer .f-top h2 {
   margin-bottom: 20px;
-  color: #fff;
+  color: #292826;
 }
 #footer .f-top p {
   line-height: 2;
-  color: #c5cbcf;
+  color: #292826;
 }
 #footer .f-top a {
-  color: #c5cbcf;
+  color: #292826;
   display: block;
   line-height: 2;
 }
@@ -876,9 +876,9 @@ button {
 }
 #footer .f-top i {
   font-size: 20px;
-  color: #c5cbcf;
+  color: #292826;
   margin: 0 5px;
-  background-color: #1a1a38;
+  background-color: #f9c844;
   border-radius: 10px;
   padding: 5px;
 }
@@ -900,10 +900,10 @@ button {
 #footer .f-bot {
   line-height: 100px;
   text-align: center;
-  background-color: #1a1a38;
+  background-color: #f9c844;
 }
 #footer .f-bot p {
-  color: #c5cbcf;
+  color: #292826;
 }
 
 #insert_container .brd_center {
@@ -928,7 +928,7 @@ button {
   font-weight: bold;
   font-size: 16px;
   border: none;
-  background-color: #4682b4;
+  background-color: #7375ff;
   padding: 15px 15px;
   border-radius: 5px;
 }
@@ -938,7 +938,7 @@ button {
   font-weight: bold;
   font-size: 16px;
   border: none;
-  background-color: #4682b4;
+  background-color: #7375ff;
   padding: 15px 15px;
   border-radius: 5px;
   margin-left: 20px;
@@ -1010,7 +1010,7 @@ button {
   scale: 1.1;
 }
 #index_container .cont2 {
-  background-color: #f9f9f9;
+  background-color: rgba(244, 244, 244, 0.9764705882);
   padding: 100px 0;
 }
 #index_container .cont2 .center {
@@ -1022,7 +1022,7 @@ button {
 }
 #index_container .cont2 .center .context h2 {
   margin-bottom: 26px;
-  color: #000;
+  color: #292826;
 }
 #index_container .cont2 .center .context p {
   margin: 0 auto;
@@ -1053,17 +1053,17 @@ button {
   padding: 24px;
   margin-bottom: 16px;
   box-sizing: border-box;
-  border: 1px solid #eee;
+  border: 1px solid #666;
 }
 #index_container .cont2 .center .inner .right .card i {
   display: flex;
   font-size: 64px;
   margin-right: 24px;
   align-items: center;
-  color: #274abb;
+  color: #7375ff;
 }
 #index_container .cont2 .center .inner .right .card h2 {
-  color: #000;
+  color: #292826;
   margin-bottom: 12px;
   font-weight: 400;
 }
@@ -1075,7 +1075,7 @@ button {
 }
 
 #cont4 {
-  background-color: #f9f9f9;
+  background-color: rgba(244, 244, 244, 0.9764705882);
   padding: 100px 0;
 }
 #cont4 .center {
@@ -1087,7 +1087,7 @@ button {
 }
 #cont4 .center .context h2 {
   margin-bottom: 26px;
-  color: #000;
+  color: #292826;
 }
 #cont4 .center .context p {
   margin-bottom: 46px;
@@ -1168,7 +1168,7 @@ button {
   height: 80px;
   margin-right: 20px;
   background-color: #fff;
-  color: #274abb;
+  color: #7375ff;
   text-align: center;
   padding-top: 15px;
   box-sizing: border-box;
@@ -1187,7 +1187,7 @@ button {
   margin-top: 100px;
 }
 #cont6 .context h2 {
-  color: #000;
+  color: #292826;
   margin-bottom: 30px;
 }
 #cont6 .context p {
@@ -1214,13 +1214,13 @@ button {
 }
 #cont6 .cards .card .contents h3 {
   margin-bottom: 12px;
-  color: #000;
+  color: #292826;
 }
 #cont6 .cards .card .contents p {
   margin-bottom: 12px;
 }
 #cont6 .cards .card .contents .icons a {
-  color: gray;
+  color: #666;
   transition: all 0.3s;
 }
 #cont6 .cards .card .contents .icons a i {
@@ -1228,7 +1228,7 @@ button {
   margin: 0 8px;
 }
 #cont6 .cards .card .contents .icons a:hover {
-  color: rgb(39, 74, 187);
+  color: #7375ff;
 }
 
 #cont7 {
@@ -1306,7 +1306,7 @@ button {
   margin-top: 100px;
 }
 #cont8 > div.context h2 {
-  color: #000;
+  color: #292826;
   margin-bottom: 30px;
 }
 #cont8 > div.context p {
@@ -1355,10 +1355,10 @@ button {
   margin-right: 20px;
 }
 #cont8 .center .card .midbar .context .icons {
-  color: #555;
+  color: #666;
 }
 #cont8 .center .card .midbar .context .icons a {
-  color: #555;
+  color: #666;
   margin-right: 20px;
 }
 #cont8 .center .card > div.context {
@@ -1367,7 +1367,7 @@ button {
 }
 #cont8 .center .card > div.context h2 {
   margin-bottom: 20px;
-  color: #000;
+  color: #292826;
 }
 #cont8 .center .card > div.context > p {
   line-height: 1.5;
@@ -1409,7 +1409,7 @@ button {
   font-weight: bold;
   font-size: 16px;
   border: none;
-  background-color: #4682b4;
+  background-color: #7375ff;
   padding: 15px 15px;
   border-radius: 5px;
   width: 40%;
@@ -1421,7 +1421,7 @@ button {
   font-weight: bold;
   font-size: 16px;
   border: none;
-  background-color: #4682b4;
+  background-color: #7375ff;
   padding: 15px 15px;
   border-radius: 5px;
   text-align: center;
@@ -1460,7 +1460,7 @@ button {
   text-align: center;
   margin-top: 100px;
   margin-bottom: 40px;
-  color: #000;
+  color: #292826;
 }
 #cont9 .context p {
   text-align: center;
@@ -1480,7 +1480,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 #cont9 .view .slide1 .img img {
   height: 100px;
@@ -1491,7 +1491,7 @@ button {
     height: 80px;
   }
   #index_container .cont2 {
-    background-color: #f9f9f9;
+    background-color: rgba(244, 244, 244, 0.9764705882);
     padding: 100px 0;
   }
   #index_container .cont2 .center {
@@ -1503,7 +1503,7 @@ button {
   }
   #index_container .cont2 .center .context h2 {
     margin-bottom: 26px;
-    color: #000;
+    color: #292826;
   }
   #index_container .cont2 .center .context p {
     margin-bottom: 46px;
@@ -1532,17 +1532,17 @@ button {
     padding: 24px;
     margin-bottom: 16px;
     box-sizing: border-box;
-    border: 1px solid #eee;
+    border: 1px solid #666;
   }
   #index_container .cont2 .center .inner .right .card i {
     display: flex;
     font-size: 64px;
     margin-right: 24px;
     align-items: center;
-    color: #274abb;
+    color: #7375ff;
   }
   #index_container .cont2 .center .inner .right .card h2 {
-    color: #000;
+    color: #292826;
     margin-bottom: 12px;
     font-weight: 400;
   }
@@ -1557,7 +1557,7 @@ button {
     margin-top: 100px;
   }
   #cont8 > div.context h2 {
-    color: #000;
+    color: #292826;
     margin-bottom: 30px;
   }
   #cont8 > div.context p {
@@ -1605,7 +1605,7 @@ button {
     width: 90%;
   }
   .h-top {
-    background: #202040;
+    background: #f9c844;
   }
   .h-bot {
     width: 100%;
@@ -1616,7 +1616,7 @@ button {
     top: -4px;
   }
   .h-bot .logo a {
-    color: #000;
+    color: #292826;
     font-size: 24px;
   }
   .h-bot .logo img {
@@ -1710,7 +1710,7 @@ button {
     line-height: 100px;
   }
   .h-bot .logo a {
-    color: gray;
+    color: #292826;
   }
   .h-bot .logo img {
     display: none;
@@ -1775,7 +1775,7 @@ button {
     font-weight: 400;
   }
   #header .clickNav ul li a:hover {
-    color: #274abb;
+    color: #7375ff;
     animation: ease-in;
     transition: all 0.3s;
     font-weight: 400;
