@@ -34,6 +34,7 @@ table {
 body {
   line-height: 1;
   font-family: "Noto Sans KR", sans-serif;
+  overflow-x: hidden;
   color: #666;
 }
 button {
@@ -267,7 +268,7 @@ button {
       color: #292826;
     }
     a {
-      color: #fff;
+      color: #292826;
     }
     i {
       font-size: 14px;
@@ -703,7 +704,7 @@ button {
               position: relative;
               line-height: 50px;
               left: 120px;
-              color: #666;
+              color: #fff;
             }
           }
         }

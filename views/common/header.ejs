@@ -26,6 +26,8 @@
       <% } else { %>
       <div><%- userData.joinname%> 님</div>
       <a class="logout" href="/logout">로그아웃</a>
+
+      <a class="logout" href="/mypage">마이페이지</a>
       <% } %>
     </div>
   </div>
@@ -60,15 +62,11 @@
             <ul class="depth2"></ul>
           </li>
           <li>
-            <a href="#">게시판</a>
+            <a href="#">상품정보</a>
             <ul class="depth2">
-              <li><a href="/brdlist">게시글 목록</a></li>
-              <li><a href="/brdinsert">게시글 작성</a></li>
+              <li><a href="/brdlist">상품목록</a></li>
+              <li><a href="/brdinsert">상품추가</a></li>
             </ul>
-          </li>
-          <li>
-            <a href="/mypage">마이페이지</a>
-            <ul class="depth2"></ul>
           </li>
         </ul>
       </div>

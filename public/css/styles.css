@@ -43,6 +43,7 @@ table {
 body {
   line-height: 1;
   font-family: "Noto Sans KR", sans-serif;
+  overflow-x: hidden;
   color: #666;
 }
 
@@ -279,7 +280,7 @@ button {
   color: #292826;
 }
 .h-top .condition a {
-  color: #fff;
+  color: #292826;
 }
 .h-top .condition i {
   font-size: 14px;
@@ -712,7 +713,7 @@ button {
   position: relative;
   line-height: 50px;
   left: 120px;
-  color: #666;
+  color: #fff;
 }
 #list_container .brd_center .card .context p {
   color: #666;
