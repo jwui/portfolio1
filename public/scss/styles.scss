@@ -436,6 +436,7 @@ button {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+
         .card {
           background-color: #fff;
           width: 320px;
@@ -618,6 +619,7 @@ button {
     background-image: url("/img/bglist.jpg");
     background-position: center;
     background-repeat: no-repeat;
+
     background-size: cover;
     height: 600px;
     display: flex;
@@ -1034,6 +1036,7 @@ button {
         display: flex;
         .left {
           width: 50%;
+
           img {
             width: 80%;
             display: block;
@@ -1546,6 +1549,7 @@ button {
     .cont2 {
       background-color: #fff;
       padding: 100px 0;
+
       .center {
         width: 100%;
         margin: 0 auto;
