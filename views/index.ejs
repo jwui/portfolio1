@@ -480,8 +480,6 @@
       let active = false;
       console.log(view);
       window.addEventListener("scroll", () => {
-        console.log(window.scrollY);
-        console.log(countUpCont.offsetTop);
         if (window.scrollY >= countUpCont.offsetTop - view) {
           if (active == false) {
             var counter1 = new CountUp("count1", 0, 989, 0, 8, {});
