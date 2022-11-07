@@ -182,7 +182,7 @@ app.get("/brdlist", function (req, res) {
   db.collection("port1_board")
     .find()
     .toArray(function (err, result) {
-      res.render("brdlist", { brdData: result });
+      res.render("brdlist", { brdData: result, userData: req.user });
     });
   //db안에 게시글 콜렉션 찾아서 데이터 전부 꺼내오고 ejs파일로 응답
 });
