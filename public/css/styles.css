@@ -1483,6 +1483,22 @@ button {
   height: 100px;
 }
 
+#cont10 {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 60px;
+}
+#cont10 .context h2 {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  color: #292826;
+}
+#cont10 #map {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (max-width: 1200px) {
   #cont9 .view .slide1 .img img {
     height: 80px;

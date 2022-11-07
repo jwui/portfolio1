@@ -10,7 +10,7 @@ const multer = require("multer");
 
 //데이터베이스의 데이터 입력, 출력을 위한 함수명령어 불러들이는 작업
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5000;
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {

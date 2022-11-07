@@ -1510,6 +1510,24 @@ button {
   }
 }
 
+#cont10 {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 60px;
+  .context {
+    h2 {
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 40px;
+      color: #292826;
+    }
+  }
+  #map {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 //서브페이지 반응형 작업
 @media screen and (max-width: 1200px) {
   #cont9 {
