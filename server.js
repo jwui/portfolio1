@@ -231,15 +231,21 @@ app.post("/add", upload.single("filetest"), function (req, res) {
 //게시글 상세화면 get 요청  /:변수명  작명가능
 //db안에 해당 게시글번호에 맞는 데이터만 꺼내오고 ejs파일로 응답
 app.get("/brddetail/:no", function (req, res) {
-  db.collection("port1_board").findOne(
-    { brdid: Number(req.params.no) },
-    function (err, result) {
-      res.render("brddetail", {
-        brdData: result,
-        userData: req.user,
-      });
-    }
-  );
+  if (!req.user) {
+    res.send(
+      "<script>alert('로그인한 회원만 이용가능합니다'); location.href='/login';</script>"
+    );
+  } else {
+    db.collection("port1_board").findOne(
+      { brdid: Number(req.params.no) },
+      function (err, result) {
+        res.render("brddetail", {
+          brdData: result,
+          userData: req.user,
+        });
+      }
+    );
+  }
 });
 
 //마이페이지(회원정보수정) 페이지 요청 경로
@@ -402,7 +408,6 @@ passport.use(
         { joinemail: useremail },
         function (err, result) {
           if (err) return done(err);
-
           if (!result)
             return done(null, false, {
               message: "존재하지않는 이메일 입니다.",
