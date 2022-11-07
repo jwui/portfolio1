@@ -1,3 +1,10 @@
+<% if(!userData) { %>
+<script>
+  alert("비회원은 접근할 수 없는 페이지입니다");
+  location.href = "/login";
+</script>
+<% } %>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
