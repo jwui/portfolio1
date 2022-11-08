@@ -369,6 +369,28 @@ button {
   display: none;
 }
 
+#subpage_container #myBtn {
+  background-image: url("/img/scrollTop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 30px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  width: 50px;
+  height: 50px;
+  padding: 0px; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  transition: all 0.1s;
+}
+#subpage_container #myBtn:hover {
+  background-color: white; /* Add a dark-grey background on hover */
+  scale: 1.2;
+}
 #subpage_container .cont1 {
   padding-top: 144px;
 }
@@ -960,6 +982,28 @@ button {
   line-height: 2;
 }
 
+#index_container #myBtn {
+  background-image: url("/img/scrollTop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 30px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  width: 50px;
+  height: 50px;
+  padding: 0px; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  transition: all 0.1s;
+}
+#index_container #myBtn:hover {
+  background-color: white; /* Add a dark-grey background on hover */
+  scale: 1.2;
+}
 #index_container .cont1 {
   display: flex;
   flex-direction: column;
